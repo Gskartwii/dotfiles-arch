@@ -24,7 +24,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/gskw/Wallpaper.jpg fill
+output * bg $HOME/.config/sway/Wallpaper.jpg fill
 #
 # Example configuration:
 #
@@ -99,11 +99,11 @@ output * bg /home/gskw/Wallpaper.jpg fill
     bindsym $mod+Up focus up
     bindsym $mod+Right focus right
 
-    # Move the focused window with the same, but add Alt
-    bindsym $mod+Alt+$left move left
-    bindsym $mod+Alt+$down move down
-    bindsym $mod+Alt+$up move up
-    bindsym $mod+Alt+$right move right
+    # Move the focused window with the same, but add Shift
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$right move right
     # Ditto, with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
@@ -208,8 +208,8 @@ bar {
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     pango_markup enabled
-    font "pango:Noto Sans"
-    status_command "SCRIPT_DIR=~/i3blocks-contrib i3blocks"
+    font "pango:Roboto"
+    swaybar_command waybar
 
     colors {
         statusline #ffffff
@@ -222,13 +222,14 @@ include /etc/sway/config.d/*
 
 set $lock_cmd swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 14x10 --effect-vignette 0.5:0.5 --grace 2 --fade-in 0.2
 
-set $mode_system System (l) lock, (s) suspend, (h) hibernate, (r) reboot, (S) shutdown
+set $mode_system System (l) lock, (e) logout (s) suspend, (h) hibernate, (r) reboot, (S) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id $lock_cmd &, mode "default"
-    bindsym s exec --no-startup-id $lock_cmd &, exec --no-startup-id systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id systemctl hibernate, mode "default"
-    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode 'default"
+    bindsym l exec $lock_cmd
+    bindsym e exec swaymsg exit, mode "default"
+    bindsym s exec systemctl $lock_cmd && suspend, mode "default"
+    bindsym h exec systemctl hibernate, mode "default"
+    bindsym r exec systemctl reboot, mode "default"
+    bindsym Shift+s exec systemctl poweroff -i, mode 'default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -243,21 +244,30 @@ input type:touchpad {
 }
 
 # HDMI configuration for TV
-output DVI-D-1 pos 0 0 res 1920x1080
-output HDMI-A-1 pos 1920 0 res 1920x1080
-font "pango:Noto Sans" # Use a neat font for window bars
+font "pango:Roboto" # Use a neat font for window bars
+titlebar_padding 8 8
+hide_edge_borders both
+client.focused #1b5e20 #4caf50 #ffffff
+title_align center
 
 exec swayidle -w \
     timeout 300 '$lock_cmd' \
     timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-    before-sleep '$lock_cmd &'
+    before-sleep '$lock_cmd'
 
-# PulseAudio configuration
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks
-bindsym $mod+F8 exec amixer -q -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
-bindsym $mod+F7 exec amixer -q -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks
+input type:keyboard {
+    xkb_layout us,fi
+}
 
-input * xkb_layout "us,fi"
-bindsym $mod+Tab exec cyclekbmap && pkill -RTMIN+1 i3blocks
+bindsym $mod+Tab exec cyclekeyboard
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%-
+bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle
+bindsym Shift+XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 1%+
+bindsym Shift+XF86AudioLowerVolume exec amixer -q -D pulse sset Master 1%-
+bindsym $mod+x exec killall -SIGUSR1 waybar
+
+exec fader.py
+exec gammastep
+
+include $HOME/.config/sway/config.local

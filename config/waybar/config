@@ -1,0 +1,83 @@
+{
+	"height": 30,
+    "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
+    "modules-right": ["idle_inhibitor", "pulseaudio#sink", "pulseaudio#source", "network", "backlight", "cpu", "memory", "sway/language", "battery", "clock"],
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%d.%m.%Y}"
+    },
+    "cpu": {
+		"states": {
+			"high": 90,
+		},
+        "format-high": " {usage}%",
+		"format": ""
+    },
+    "memory": {
+		"states": {
+			"high": 90,
+		},
+        "format-high": " {usage}%",
+		"format": ""
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", ""]
+    },
+    "battery": {
+        "states": {
+            "good": 100,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        //"format-good": "",
+        //"format-full": "",
+        "format-icons": ["", "", "", "", "", "", "", "", "", ""]
+    },
+    "network": {
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " Ethernet: {ipaddr}/{cidr}",
+        "format-linked": " {ifname}",
+        "format-disconnected": "⚠ Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio#sink": {
+        "format": "{icon} {volume}% {desc}",
+        "format-muted": " {desc}",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+		"max-length": 20,
+        "on-click": "pavucontrol",
+		"on-click-right": "cyclepasink"
+    },
+    "pulseaudio#source": {
+        "format": "{format_source}",
+		"format-source": " {volume} %",
+		"format-source-muted": "",
+        "on-click": "pavucontrol",
+    },
+	"sway/language": {
+		"format": " {}"
+	}
+}

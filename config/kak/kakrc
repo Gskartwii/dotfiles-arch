@@ -51,7 +51,8 @@ plug "andreyorst/fzf.kak" config %{
 
 set-option global tabstop 4
 set-option global indentwidth 4
-set global modelinefmt "%%opt{modeline_progress}%opt{modelinefmt}"
+set-option global modelinefmt "%%opt{modeline_progress}%opt{modelinefmt}"
+set-option global ui_options ncurses_set_title=false
 
 hook global WinSetOption filetype=markdown %{
     set-option window autowrap_column 80
