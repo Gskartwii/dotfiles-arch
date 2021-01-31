@@ -49,8 +49,8 @@
         "format-icons": ["", "", "", "", "", "", "", "", "", ""]
     },
     "network": {
-        "format-wifi": " {essid} ({signalStrength}%)",
-        "format-ethernet": " Ethernet: {ipaddr}/{cidr}",
+        "format-wifi": " {essid}",
+        "format-ethernet": " Ethernet",
         "format-linked": " {ifname}",
         "format-disconnected": "⚠ Disconnected",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
