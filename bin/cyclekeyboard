@@ -1,0 +1,8 @@
+#!/bin/bash
+
+inputid="1:1:AT_Translated_Set_2_keyboard"
+
+inputdata=$(swaymsg -t get_inputs | jq ".[] | select(.identifier==\"$inputid\")")
+index=$(echo "$inputdata" | jq ".xkb_active_layout_index")
+layoutcount=$(echo "$inputdata" | jq ".xkb_layout_names | length")
+swaymsg input "$inputid" xkb_switch_layout $((($index + 1) % $layoutcount))
