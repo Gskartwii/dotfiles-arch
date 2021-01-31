@@ -1,0 +1,8 @@
+#!/bin/bash
+
+TARGET=${1:-$HOME}
+
+for script in zprofile zshrc p10k.zsh zshenv; do
+	[[ -L "$TARGET/.$script" ]] && rm "$TARGET/.$script"
+	ln -s $TARGET/.config/zsh/$script $TARGET/.$script
+done
