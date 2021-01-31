@@ -1,0 +1,7 @@
+export PATH="/usr/local/go/bin:$HOME/go/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH"
+
+. ~/.config/environment.d/envvars.conf
+
+if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]] && [[ $(tty) = /dev/tty1 ]] ; then
+	XKB_DEFAULT_LAYOUT=us exec sway
+fi
