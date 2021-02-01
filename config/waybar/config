@@ -6,7 +6,7 @@
         "format": "<span style=\"italic\">{}</span>"
     },
     "idle_inhibitor": {
-        "format": "{icon}",
+        "format": "<span size=\"12000\">{icon}</span>",
         "format-icons": {
             "activated": "",
             "deactivated": ""
@@ -20,18 +20,18 @@
 		"states": {
 			"high": 90,
 		},
-        "format-high": " {usage}%",
+        "format-high": "<span size=\"12000\"></span> {usage}%",
 		"format": ""
     },
     "memory": {
 		"states": {
 			"high": 90,
 		},
-        "format-high": " {usage}%",
+        "format-high": "<span size=\"12000\"></span> {usage}%",
 		"format": ""
     },
     "backlight": {
-        "format": "{icon} {percent}%",
+        "format": "<span size=\"12000\">{icon}</span> {percent}%",
         "format-icons": ["", "", "", "", "", ""]
     },
     "battery": {
@@ -40,24 +40,24 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{icon} {time}",
+        "format": "<span size=\"12000\">{icon}</span> {capacity}%",
+        "format-charging": "<span size=\"12000\"></span> {capacity}%",
+        "format-plugged": "<span size=\"12000\"></span> {capacity}%",
+        "format-alt": "<span size=\"12000\">{icon}</span> {time}",
         //"format-good": "",
         //"format-full": "",
         "format-icons": ["", "", "", "", "", "", "", "", "", ""]
     },
     "network": {
-        "format-wifi": " {essid}",
-        "format-ethernet": " Ethernet",
-        "format-linked": " {ifname}",
-        "format-disconnected": "⚠ Disconnected",
+        "format-wifi": "<span size=\"12000\"></span> {essid}",
+        "format-ethernet": "<span size=\"12000\"></span> Ethernet",
+        "format-linked": "<span size=\"12000\"></span> {ifname}",
+        "format-disconnected": "<span size=\"12000\">⚠</span> Disconnected",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio#sink": {
-        "format": "{icon} {volume}% {desc}",
-        "format-muted": " {desc}",
+        "format": "<span size=\"12000\">{icon}</span> {volume}% {desc}",
+        "format-muted": "<span size=\"12000\"></span> {desc}",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -73,15 +73,15 @@
     },
     "pulseaudio#source": {
         "format": "{format_source}",
-		"format-source": " {volume} %",
-		"format-source-muted": "",
+		"format-source": "<span size=\"12000\"></span> {volume} %",
+		"format-source-muted": "<span size=\"12000\"></span>",
         "on-click": "pavucontrol",
     },
 	"sway/language": {
-		"format": " {}"
+		"format": "<span size=\"12000\"></span> {}"
 	},
 	"custom/swayscratch": {
-		"format": " {}",
+		"format": "<span size=\"12000\"></span> {}",
 		"exec": "scratchpad_length"
 	},
 }
