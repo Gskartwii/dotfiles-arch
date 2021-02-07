@@ -56,6 +56,10 @@ window#waybar.chromium {
     border-bottom: 3px solid #ffffff;
 }
 
+#custom-swayscratch {
+    margin: 0 4px;
+}
+
 #clock,
 #battery,
 #cpu,
