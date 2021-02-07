@@ -29,13 +29,17 @@ plug "ul/kak-lsp" do %{
 }
 
 plug "Gskartwii/droplet.kak" theme
+plug "TeddyDD/kakoune-selenized" theme
+plug "evanrelf/primer.kak" theme
+plug "caksoylar/kakoune-snow" theme
+plug "nesyamun/nord-kakoune" theme
 
-colorscheme droplet
+colorscheme primer
 
 plug "andreyorst/powerline.kak" config %{
     powerline-start
 } defer powerline %{
-    powerline-theme droplet
+    # powerline-theme droplet
 }
 plug "danr/kakoune-easymotion" config %{
 	map global user e ':enter-user-mode easymotion<ret>' -docstring 'Easymotion'
@@ -48,6 +52,8 @@ plug "andreyorst/fzf.kak" config %{
 } defer "fzf_vcs" %{
 	set-option global fzf_git_command 'git ls-files --cached --others --modified --exclude-standard'
 }
+
+plug "alexherbo2/wl-clipboard.kak"
 
 set-option global tabstop 4
 set-option global indentwidth 4
