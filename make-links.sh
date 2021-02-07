@@ -20,7 +20,9 @@ done
 mkdir -p $BASETARGET/.local/bin
 for bin in ./bin/*; do
     bin=${bin##*/}
-    cp ./bin/$bin $BASETARGET/.local/bin/$bin
+    [[ -L "$BASETARGET/.local/bin/$bin" ]] && rm "$BASETARGET/.local/bin/$bin"
+    [[ -e "$BASETARGET/.local/bin/$bin" ]] && echo "Skipping $BASETARGET/.local/bin/$bin"
+    ln -s $WD/bin/$bin $BASETARGET/.local/bin/$bin
 done
 
 [[ ! -d $TARGET/kak/plugins ]] && mkdir $TARGET/kak/plugins
