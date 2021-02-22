@@ -36,11 +36,6 @@ plug "nesyamun/nord-kakoune" theme
 
 colorscheme primer
 
-plug "andreyorst/powerline.kak" config %{
-    powerline-start
-} defer powerline %{
-    # powerline-theme droplet
-}
 plug "danr/kakoune-easymotion" config %{
 	map global user e ':enter-user-mode easymotion<ret>' -docstring 'Easymotion'
 }
@@ -57,9 +52,11 @@ plug "alexherbo2/wl-clipboard.kak" config %{
     require-module 'wl-clipboard'
 }
 
+plug "jbomanson/search-doc.kak" defer search-doc %{} demand
+
 set-option global tabstop 4
 set-option global indentwidth 4
-set-option global modelinefmt "%%opt{modeline_progress}%opt{modelinefmt}"
+set-option global modelinefmt " %%val{bufname}{StatusLineValue}:%%val{cursor_line}:%%val{cursor_char_column}{StatusLine} %%sh{expr $kak_cursor_line \* 100 / $kak_buf_line_count}%%%%  {{context_info}}  {{mode_info}}  {StatusLineValue}%%val{session}{StatusLine}"
 set-option global ui_options ncurses_set_title=false
 
 hook global WinSetOption filetype=markdown %{
