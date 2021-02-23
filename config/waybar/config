@@ -75,7 +75,7 @@
         "format": "{format_source}",
 		"format-source": "<span size=\"12000\"></span> {volume} %",
 		"format-source-muted": "<span size=\"12000\"></span>",
-        "on-click": "pavucontrol",
+        "on-click": "pavucontrol -t 4",
     },
 	"sway/language": {
 		"format": "<span size=\"12000\"></span> {}"

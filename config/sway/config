@@ -271,3 +271,5 @@ exec fader.py
 exec gammastep
 
 include $HOME/.config/sway/config.local
+
+exec "systemctl --user import-environment"
