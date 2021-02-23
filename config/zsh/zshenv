@@ -2,6 +2,8 @@ export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
 export MATLAB_LOG_DIR=/tmp
+export TEXMFVAR=$HOME/.cache/texlive
+export TEXMFCONFIG=$home/.config/texlive
 
 if [[ -x $HOME/.config/zsh/zshenv.local ]]; then
     source $HOME/.config/zsh/zshenv.local
