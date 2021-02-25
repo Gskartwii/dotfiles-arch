@@ -47,10 +47,16 @@ plug "alexherbo2/wl-clipboard.kak" config %{
 
 plug "jbomanson/search-doc.kak" defer search-doc %{} demand
 
+plug "andreyorst/smarttab.kak" config %{
+    hook global WinSetOption filetype=rust expandtab
+    hook global WinSetOption filetype=scala expandtab
+    hook global WinSetOption filetype=go noexpandtab
+}
+
 set-option global tabstop 4
 set-option global indentwidth 4
 set-option global modelinefmt " %%val{bufname}{StatusLineValue}:%%val{cursor_line}:%%val{cursor_char_column}{StatusLine} %%sh{expr $kak_cursor_line \* 100 / $kak_buf_line_count}%%%%  {{context_info}}  {{mode_info}}  {StatusLineValue}%%val{session}{StatusLine}"
-set-option global ui_options ncurses_set_title=false
+set-option global ui_options ncurses_set_title=false ncurses_enable_mouse=false
 
 hook global WinSetOption filetype=markdown %{
     set-option window autowrap_column 80
