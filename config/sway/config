@@ -260,11 +260,11 @@ input type:keyboard {
 }
 
 bindsym $mod+Tab exec cyclekeyboard
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+
-bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%-
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master unmute && amixer -q -D pulse sset Master 5%+
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master unmute && amixer -q -D pulse sset Master 5%-
 bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle
-bindsym Shift+XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 1%+
-bindsym Shift+XF86AudioLowerVolume exec amixer -q -D pulse sset Master 1%-
+bindsym Shift+XF86AudioRaiseVolume exec amixer -q -D pulse sset Master unmute && amixer -q -D pulse sset Master 1%+
+bindsym Shift+XF86AudioLowerVolume exec amixer -q -D pulse sset Master unmute && amixer -q -D pulse sset Master 1%-
 bindsym $mod+x exec killall -SIGUSR1 waybar
 
 exec fader.py
