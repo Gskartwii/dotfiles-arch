@@ -13,6 +13,7 @@ export GOPATH=$HOME/go
 
 alias ls=exa
 alias icat='kitty +kitten icat'
+alias btm='btm --color gruvbox-light'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh
