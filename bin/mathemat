@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# For whatever reason, Mathematica is unable to launch under Wayland
+QT_QPA_PLATFORM=xcb mathematica

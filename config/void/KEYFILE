@@ -1,5 +1,6 @@
 # Comments are supported.
 modal
+insert:i
 unselect:esc
 scroll_up:v
 scroll_down:V
