@@ -9,6 +9,7 @@ plugins=(git ssh-agent gpg-agent z)
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR=kak
+export KEYFILE=$HOME/.config/void/KEYFILE
 export GOPATH=$HOME/go
 
 alias ls=exa
