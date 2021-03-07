@@ -1,4 +1,5 @@
 # Comments are supported.
+no_defaults
 modal
 insert:i
 unselect:esc
