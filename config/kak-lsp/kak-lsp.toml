@@ -8,3 +8,8 @@ filetypes = ["go"]
 roots = ["Gopkg.toml", "go.mod", ".git", ".hg"]
 command = "gopls"
 args = ["serve"]
+
+[language.scala]
+filetypes = ["scala"]
+roots = ["build.sbt"]
+command = "metals-kakoune"

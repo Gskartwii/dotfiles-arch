@@ -4,7 +4,8 @@ plug "ul/kak-lsp" do %{
     cargo build --release --locked
     cargo install --force --path .
 } config %{
-    hook global WinSetOption filetype=(rust|go) %{
+    set-option global lsp_cmd "/home/gskw/.config/kak/plugins/kak-lsp/target/debug/kak-lsp -s %val{session}"
+    hook global WinSetOption filetype=(rust|go|scala) %{
         echo -debug "Enabling LSP for filetype %opt{filetype}"
         set-option window lsp_auto_highlight_references true
         set-option window lsp_hover_anchor false
