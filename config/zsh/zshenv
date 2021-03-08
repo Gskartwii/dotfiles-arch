@@ -5,6 +5,10 @@ export MATLAB_LOG_DIR=/tmp
 export TEXMFVAR=$HOME/.cache/texlive
 export TEXMFCONFIG=$home/.config/texlive
 
+export EDITOR=kak
+export KEYFILE=$HOME/.config/void/KEYFILE
+export GOPATH=$HOME/go
+
 if [[ -x $HOME/.config/zsh/zshenv.local ]]; then
     source $HOME/.config/zsh/zshenv.local
 fi
