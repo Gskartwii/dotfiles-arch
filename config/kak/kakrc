@@ -51,6 +51,7 @@ plug "andreyorst/smarttab.kak" config %{
     hook global WinSetOption filetype=rust expandtab
     hook global WinSetOption filetype=scala expandtab
     hook global WinSetOption filetype=go noexpandtab
+    hook global WinSetOption filetype=c expandtab
 }
 
 set-option global tabstop 4
@@ -67,11 +68,19 @@ map global user q ':db<ret>' -docstring 'Close buffer'
 
 hook global WinSetOption filetype=rust %{
     set-option window formatcmd 'rustfmt'
+    set-option window tabstop 4
+    set-option window indentwidth 4
 }
 hook global WinSetOption filetype=go %{
     set-option window formatcmd 'gofmt'
+    set-option window tabstop 4
+    set-option window indentwidth 4
 }
 hook global WinSetOption filetype=scala %{
     set-option window tabstop 2
     set-option window indentwidth 2
+}
+hook global WinSetOption filetype=c %{
+    set-option window tabstop 4
+    set-option window indentwidth 4
 }
