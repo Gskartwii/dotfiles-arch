@@ -26,7 +26,7 @@
     },
     "memory": {
 		"states": {
-			"high": 90,
+			"high": 80,
 		},
         "format-high": "<span size=\"12000\"></span> {usage}%",
 		"format": ""
