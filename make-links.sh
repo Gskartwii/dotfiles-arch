@@ -4,7 +4,7 @@ BASETARGET=${1:-$HOME}
 TARGET=$BASETARGET/.config
 mkdir -p $TARGET
 WD=$(pwd)
-for dir in ./config/*/; do
+for dir in ./config/*; do
     dir=${dir%*/}
     dir=${dir##*/}
     [[ -L "$TARGET/$dir" ]] && rm "$TARGET/$dir"
