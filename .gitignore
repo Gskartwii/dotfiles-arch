@@ -1,2 +1,4 @@
 config/kak/plugins/
+config/pulse/*
+!config/pulse/default.pa
 *.local
