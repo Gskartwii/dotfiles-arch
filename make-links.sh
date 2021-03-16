@@ -26,3 +26,7 @@ for bin in ./bin/*; do
 done
 
 [[ ! -d $TARGET/kak/plugins ]] && mkdir $TARGET/kak/plugins
+
+[[ -L "$BASETARGET/.ssh" ]] && rm "$BASETARGET/.ssh"
+[[ -e "$BASETARGET/.ssh" ]] && echo "Skipping $BASETARGET/.ss"
+ln -s $WD/ssh $BASETARGET/.ssh
