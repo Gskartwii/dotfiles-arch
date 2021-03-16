@@ -1,0 +1,3 @@
+# https://shibumi.dev/posts/wayland-in-2021/
+sudo pacman -S xdg-desktop-portal-wlr pipewire libpipewire02 pipewire-media-session
+systemctl enable --user pipewire-media-session.service
