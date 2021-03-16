@@ -55,6 +55,8 @@ plug "andreyorst/smarttab.kak" config %{
     hook global WinSetOption filetype=c expandtab
 }
 
+plug "KJ_Duncan/kakoune-plantuml.kak" domain "bitbucket.org"
+
 set-option global tabstop 4
 set-option global indentwidth 4
 set-option global modelinefmt " %%val{bufname}{StatusLineValue}:%%val{cursor_line}:%%val{cursor_char_column}{StatusLine} %%sh{expr $kak_cursor_line \* 100 / $kak_buf_line_count}%%%%  {{context_info}}  {{mode_info}}  {StatusLineValue}%%val{session}{StatusLine}"
@@ -84,4 +86,8 @@ hook global WinSetOption filetype=scala %{
 hook global WinSetOption filetype=c %{
     set-option window tabstop 4
     set-option window indentwidth 4
+}
+hook global WinSetOption filetype=latex %{
+    map window insert <a-a> 'ä'
+    map window insert <a-o> 'ö'
 }
