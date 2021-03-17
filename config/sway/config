@@ -252,6 +252,7 @@ titlebar_padding 8 8
 hide_edge_borders both
 client.focused #1b5e20 #4caf50 #ffffff
 title_align center
+focus_follows_mouse no
 
 exec swayidle -w \
     timeout 300 '$lock_cmd' \
