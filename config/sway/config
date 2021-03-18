@@ -253,6 +253,7 @@ hide_edge_borders both
 client.focused #1b5e20 #4caf50 #ffffff
 title_align center
 focus_follows_mouse no
+seat * hide_cursor 3000
 
 exec swayidle -w \
     timeout 300 '$lock_cmd' \
