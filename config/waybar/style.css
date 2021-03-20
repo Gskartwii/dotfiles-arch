@@ -72,7 +72,9 @@ window#waybar.chromium {
 #tray,
 #mode,
 #idle_inhibitor,
-#mpd {
+#mpd,
+#custom-pacman,
+#disk {
     padding: 0 10px;
     margin: 0 4px;
     color: #ffffff;
@@ -128,7 +130,7 @@ label:focus {
     background-color: #000000;
 }
 
-#cpu, #memory {
+#cpu, #memory, #disk {
     background-color: #d50000;
     color: #ffffff;
 }
@@ -171,4 +173,9 @@ label:focus {
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
+}
+
+#custom-pacman {
+    background-color: #43a047;
+    color: #ffffff;
 }

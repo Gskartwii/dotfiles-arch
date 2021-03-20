@@ -1,7 +1,7 @@
 {
 	"height": 30,
     "modules-left": ["sway/workspaces", "custom/swayscratch", "sway/mode"],
-    "modules-right": ["idle_inhibitor", "pulseaudio#sink", "pulseaudio#source", "network", "backlight", "cpu", "memory", "sway/language", "battery", "clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio#sink", "pulseaudio#source", "network", "backlight", "cpu", "memory", "disk", "custom/pacman", "sway/language", "battery", "clock"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -85,4 +85,20 @@
 		"format": "<span size=\"12000\"></span> {}",
 		"exec": "scratchpad_length"
 	},
+    "custom/pacman": {
+        "format": " {}",
+        "interval": 3600,                     // every hour
+        "exec": "waybar-updates",             // # of updates
+        "exec-if": "exit 0",                  // always run; consider advanced run conditions
+		"signal": 8
+    },
+	"disk": {
+		"interval": 600,
+		"format": "",
+		"format-high": "<span size=\"12000\"></span> {percentage_used} %",
+		"path": "/",
+		"states": {
+			"high": 90,
+		}
+	}
 }
