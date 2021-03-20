@@ -1,5 +1,5 @@
 {
-	"height": 30,
+    "height": 30,
     "modules-left": ["sway/workspaces", "custom/swayscratch", "sway/mode"],
     "modules-right": ["idle_inhibitor", "pulseaudio#sink", "pulseaudio#source", "network", "backlight", "cpu", "memory", "disk", "custom/pacman", "sway/language", "battery", "clock"],
     "sway/mode": {
@@ -13,23 +13,23 @@
         }
     },
     "clock": {
-		"locale": "en_GB.UTF-8",
+        "locale": "en_GB.UTF-8",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%d.%m.%Y W%V}"
     },
     "cpu": {
-		"states": {
-			"high": 90,
-		},
+        "states": {
+            "high": 90,
+        },
         "format-high": "<span size=\"12000\"></span> {usage}%",
-		"format": ""
+        "format": ""
     },
     "memory": {
-		"states": {
-			"high": 80,
-		},
+        "states": {
+            "high": 80,
+        },
         "format-high": "<span size=\"12000\"></span> {usage}%",
-		"format": ""
+        "format": ""
     },
     "backlight": {
         "format": "<span size=\"12000\">{icon}</span> {percent}%",
@@ -68,37 +68,37 @@
             "car": "",
             "default": ["", "", ""]
         },
-		"max-length": 20,
+        "max-length": 20,
         "on-click": "pavucontrol",
-		"on-click-right": "cyclepasink"
+        "on-click-right": "cyclepasink"
     },
     "pulseaudio#source": {
         "format": "{format_source}",
-		"format-source": "<span size=\"12000\"></span> {volume} %",
-		"format-source-muted": "<span size=\"12000\"></span>",
+        "format-source": "<span size=\"12000\"></span> {volume} %",
+        "format-source-muted": "<span size=\"12000\"></span>",
         "on-click": "pavucontrol -t 4",
     },
-	"sway/language": {
-		"format": "<span size=\"12000\"></span> {}"
-	},
-	"custom/swayscratch": {
-		"format": "<span size=\"12000\"></span> {}",
-		"exec": "scratchpad_length"
-	},
+    "sway/language": {
+        "format": "<span size=\"12000\"></span> {}"
+    },
+    "custom/swayscratch": {
+        "format": "<span size=\"12000\"></span> {}",
+        "exec": "scratchpad_length"
+    },
     "custom/pacman": {
         "format": " {}",
         "interval": 3600,                     // every hour
         "exec": "waybar-updates",             // # of updates
         "exec-if": "exit 0",                  // always run; consider advanced run conditions
-		"signal": 8
+        "signal": 8
     },
-	"disk": {
-		"interval": 600,
-		"format": "",
-		"format-high": "<span size=\"12000\"></span> {percentage_used} %",
-		"path": "/",
-		"states": {
-			"high": 90,
-		}
-	}
+    "disk": {
+        "interval": 600,
+        "format": "",
+        "format-high": "<span size=\"12000\"></span> {percentage_used} %",
+        "path": "/",
+        "states": {
+            "high": 90,
+        }
+    }
 }
