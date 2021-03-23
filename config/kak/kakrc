@@ -4,7 +4,7 @@ plug "ul/kak-lsp" do %{
     cargo build --release --locked
     cargo install --force --path .
 } config %{
-    set-option global lsp_cmd "/home/gskw/.config/kak/plugins/kak-lsp/target/debug/kak-lsp -s %val{session}"
+    # set-option global lsp_cmd "/home/gskw/.config/kak/plugins/kak-lsp/target/debug/kak-lsp -s %val{session}"
     hook global WinSetOption filetype=(rust|go|scala) %{
         echo -debug "Enabling LSP for filetype %opt{filetype}"
         set-option window lsp_auto_highlight_references true
@@ -53,6 +53,7 @@ plug "andreyorst/smarttab.kak" config %{
     hook global WinSetOption filetype=scala expandtab
     hook global WinSetOption filetype=go noexpandtab
     hook global WinSetOption filetype=c expandtab
+    hook global WinSetOption filetype=json expandtab
 }
 
 plug "KJ_Duncan/kakoune-plantuml.kak" domain "bitbucket.org"
@@ -95,4 +96,12 @@ hook global WinSetOption filetype=c %{
 hook global WinSetOption filetype=latex %{
     map window insert <a-a> 'ä'
     map window insert <a-o> 'ö'
+}
+hook global WinSetOption filetype=json %{
+    set-option window tabstop 4
+    set-option window indentwidth 4
+}
+
+hook global BufCreate .*waybar/config %{
+    set buffer filetype json
 }
