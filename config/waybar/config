@@ -64,6 +64,7 @@
             "headphone": "",
             "hands-free": "",
             "headset": "",
+            "hdmi": "🖵",
             "phone": "",
             "portable": "",
             "car": "",
@@ -75,7 +76,7 @@
     },
     "pulseaudio#source": {
         "format": "{format_source}",
-        "format-source": "<span size=\"12000\"></span> {volume} %",
+        "format-source": "<span size=\"12000\"></span> {volume}%",
         "format-source-muted": "<span size=\"12000\"></span>",
         "on-click": "pavucontrol -t 4",
     },
