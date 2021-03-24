@@ -28,5 +28,5 @@ done
 [[ ! -d $TARGET/kak/plugins ]] && mkdir $TARGET/kak/plugins
 
 [[ -L "$BASETARGET/.ssh" ]] && rm "$BASETARGET/.ssh"
-[[ -e "$BASETARGET/.ssh" ]] && echo "Skipping $BASETARGET/.ss"
+[[ -e "$BASETARGET/.ssh" ]] && echo "Skipping $BASETARGET/.ssh"
 ln -s $WD/ssh $BASETARGET/.ssh
