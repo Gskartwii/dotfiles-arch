@@ -1,2 +1,4 @@
+Include config.local
+
 Host *.aalto.fi
 	User hannula7
