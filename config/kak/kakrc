@@ -6,7 +6,6 @@ plug "ul/kak-lsp" do %{
 } config %{
     # set-option global lsp_cmd "/home/gskw/.config/kak/plugins/kak-lsp/target/debug/kak-lsp -s %val{session}"
     hook global WinSetOption filetype=(rust|go|scala) %{
-        echo -debug "Enabling LSP for filetype %opt{filetype}"
         set-option window lsp_auto_highlight_references true
         set-option window lsp_hover_anchor false
         set-option window lsp_hover_max_lines 10
@@ -20,6 +19,7 @@ plug "ul/kak-lsp" do %{
 
     map global user d ':lsp-diagnostics<ret>' -docstring 'Diagnostics'
     map global user l ':enter-user-mode lsp<ret>' -docstring 'LSP Mode'
+    lsp-auto-hover-insert-mode-enable
 }
 
 plug "Gskartwii/droplet.kak" theme
