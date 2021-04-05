@@ -8,9 +8,23 @@ plugins=(git ssh-agent gpg-agent z)
 
 source $ZSH/oh-my-zsh.sh
 
+randsession() {
+	randword=$(shuf -e -n1 chess backgammon checkers hearts solitaire freecell pinball spades minesweeper)
+	while [ -f /run/user/$UID/kakoune/$randword ]; do
+		randword=$(shuf -e -n1 chess backgammon checkers hearts solitaire freecell pinball spades minesweeper)
+	done
+	echo $randword
+}
+
 alias ls=exa
 alias icat='kitty +kitten icat'
 alias btm='btm --color gruvbox-light'
+
+alias kakc='/usr/bin/env kak -c'
+kak() {
+	/usr/bin/env kak -s $(randsession) $@
+}
+
 voiddb() {
 	void $HOME/.config/void/db/$1.db
 }
