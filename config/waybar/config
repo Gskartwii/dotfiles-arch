@@ -22,18 +22,18 @@
         "states": {
             "high": 90,
         },
-        "format-high": "<span size=\"12000\"></span> {usage}%",
+        "format-high": "<span size=\"12000\"></span> {usage} %",
         "format": ""
     },
     "memory": {
         "states": {
             "high": 80,
         },
-        "format-high": "<span size=\"12000\"></span> {percentage}%",
+        "format-high": "<span size=\"12000\"></span> {percentage} %",
         "format": ""
     },
     "backlight": {
-        "format": "<span size=\"12000\">{icon}</span> {percent}%",
+        "format": "<span size=\"12000\">{icon}</span> {percent} %",
         "format-icons": ["", "", "", "", "", ""]
     },
     "battery": {
@@ -42,9 +42,9 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "<span size=\"12000\">{icon}</span> {capacity}%",
-        "format-charging": "<span size=\"12000\"></span> {capacity}%",
-        "format-plugged": "<span size=\"12000\"></span> {capacity}%",
+        "format": "<span size=\"12000\">{icon}</span> {capacity} %",
+        "format-charging": "<span size=\"12000\"></span> {capacity} %",
+        "format-plugged": "<span size=\"12000\"></span> {capacity} %",
         "format-alt": "<span size=\"12000\">{icon}</span> {time}",
         //"format-good": "",
         //"format-full": "",
@@ -58,7 +58,7 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio#sink": {
-        "format": "<span size=\"12000\">{icon}</span> {volume}% {desc}",
+        "format": "<span size=\"12000\">{icon}</span> {volume} % {desc}",
         "format-muted": "<span size=\"12000\"></span> {desc}",
         "format-icons": {
             "headphone": "",
@@ -76,7 +76,7 @@
     },
     "pulseaudio#source": {
         "format": "{format_source}",
-        "format-source": "<span size=\"12000\"></span> {volume}%",
+        "format-source": "<span size=\"12000\"></span> {volume} %",
         "format-source-muted": "<span size=\"12000\"></span>",
         "on-click": "pavucontrol -t 4",
     },
