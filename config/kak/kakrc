@@ -27,6 +27,7 @@ plug "TeddyDD/kakoune-selenized" theme
 plug "evanrelf/primer.kak" theme
 plug "caksoylar/kakoune-snow" theme
 plug "nesyamun/nord-kakoune" theme
+plug "vbauerster/second-light" theme
 
 colorscheme primer
 
