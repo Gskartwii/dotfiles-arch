@@ -1,0 +1,9 @@
+#compdef kakc
+
+function _kakc_sessions {
+    _path_files -W /run/user/$UID/kakoune
+}
+
+_arguments -C \
+	"1: :_kakc_sessions" \
+	"2: :_files"
