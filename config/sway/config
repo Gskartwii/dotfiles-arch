@@ -275,6 +275,7 @@ bindsym $mod+x exec killall -SIGUSR1 waybar
 
 exec fader.py
 exec gammastep
+exec mako
 
 include $HOME/.config/sway/config.local
 
