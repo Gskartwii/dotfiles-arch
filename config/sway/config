@@ -214,12 +214,6 @@ bar {
     pango_markup enabled
     font "pango:Roboto"
     swaybar_command waybar
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
 }
 
 include /etc/sway/config.d/*
@@ -251,7 +245,8 @@ input type:touchpad {
 font "pango:Roboto" # Use a neat font for window bars
 titlebar_padding 8 8
 hide_edge_borders both
-client.focused #1b5e20 #4caf50 #ffffff
+client.unfocused #557174 #f7f7e8 #557174
+client.focused #557174 #9dad7f #f7f7e8
 title_align center
 focus_follows_mouse no
 seat * hide_cursor 3000

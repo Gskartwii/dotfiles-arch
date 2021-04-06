@@ -4,3 +4,4 @@ config/pulse/*
 *.local
 ssh/*
 !ssh/config
+config/sway/Wallpaper.jpg
