@@ -1,7 +1,7 @@
 {
     "height": 30,
     "modules-left": ["sway/workspaces", "custom/swayscratch", "sway/mode"],
-    "modules-right": ["idle_inhibitor", "pulseaudio#sink", "pulseaudio#source", "network", "backlight", "cpu", "memory", "disk", "custom/pacman", "sway/language", "battery", "clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio#sink", "pulseaudio#source", "network", "backlight", "cpu", "memory", "disk", "custom/pacman", "sway/language", "battery", "custom/date", "custom/clock"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -12,11 +12,13 @@
             "deactivated": ""
         }
     },
-    "clock": {
+    "custom/clock": {
         "interval": 1,
-        "locale": "en_GB.UTF-8",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%d.%m.%Y W%V}"
+        "exec": "date +%-H:%M"
+    },
+    "custom/date": {
+        "interval": 1,
+        "exec": "date \"+%a %-d.%-m.%Y\""
     },
     "cpu": {
         "states": {

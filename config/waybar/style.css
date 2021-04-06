@@ -47,6 +47,8 @@ window#waybar.hidden {
     margin: 0 4px;
 }
 
+#custom-clock,
+#custom-date,
 #clock,
 #language,
 #battery,
@@ -63,7 +65,7 @@ window#waybar.hidden {
 #mpd,
 #custom-pacman,
 #disk {
-    padding: 0 10px;
+    padding: 0 8px;
     margin: 0 4px;
     color: #557174;
 }
