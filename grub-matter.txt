@@ -1,0 +1,1 @@
+./matter.py  -i arch microsoft-windows folder _ _ -bg FFF8E1 -fg 263238 -hl E91E63 -ff ~/Downloads/Poiret/PoiretOne-Regular.ttf -fn Poiret One Regular -fs 48
