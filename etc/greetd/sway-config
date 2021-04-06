@@ -1,4 +1,6 @@
-exec "wlgreet --command sway-run.sh; swaymsg exit"
+exec "/usr/local/bin/wlgreet --command sway-run.sh; swaymsg exit"
+
+output * bg /etc/greetd/Wallpaper.jpg fill
 
 bindsym Mod4+shift+e exec swaynag \
 	-t warning \

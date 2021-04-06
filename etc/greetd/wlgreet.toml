@@ -1,0 +1,20 @@
+outputMode = "active"
+question = "Hello"
+
+[background]
+red = 0.596078
+blue = 0.866667
+green = 0.7921569
+opacity = 1.0
+
+[border]
+red = 0.317647
+blue = 0.77255
+green = 0.64706
+opacity = 0.8
+
+[textColor]
+red = 0.96863
+green = 0.96863
+blue = 0.90980
+opacity = 1.0
