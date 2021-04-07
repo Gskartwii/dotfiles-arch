@@ -218,7 +218,7 @@ bar {
 
 include /etc/sway/config.d/*
 
-set $lock_cmd swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 14x10 --effect-vignette 0.5:0.5 --grace 2 --fade-in 0.2
+set $lock_cmd swaylock --daemonize
 
 set $mode_system System (l) lock, (e) logout (s) suspend, (h) hibernate, (r) reboot, (S) shutdown
 mode "$mode_system" {
