@@ -116,7 +116,21 @@ hook global KakBegin .* %{
 
         case $kak_session in
             *[!0-9]*) ;;
-            *) echo "rename-session $randword"
+            *) echo "rename-session $randword" ;;
+        esac
+    }
+}
+
+hook global ClientCreate .* %{
+    evaluate-commands %sh{
+        randname=$(shuf -e -n1 red green blue yellow maroon magenta black white brown purple orange)
+        while [[ $kak_client_list == *$randname* ]]; do
+            randname=$(shuf -e -n1 red green blue yellow maroon magenta black white brown purple orange)
+        done
+
+        case $kak_session in
+            client[0-9]*) ;;
+            *) echo "rename-client $randname" ;;
         esac
     }
 }
