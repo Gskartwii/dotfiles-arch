@@ -14,7 +14,7 @@
     },
     "custom/clock": {
         "interval": 1,
-        "exec": "date +%-H:%M"
+        "exec": "date +%-H.%M"
     },
     "custom/date": {
         "interval": 1,
