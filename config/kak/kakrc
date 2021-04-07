@@ -106,3 +106,17 @@ hook global WinSetOption filetype=json %{
 hook global BufCreate .*waybar/config %{
     set buffer filetype json
 }
+
+hook global KakBegin .* %{
+    evaluate-commands %sh{
+        randword=$(shuf -e -n1 chess backgammon checkers hearts solitaire freecell pinball spades minesweeper)
+        while [ -f /run/user/$UID/kakoune/$randword ]; do
+            randword=$(shuf -e -n1 chess backgammon checkers hearts solitaire freecell pinball spades minesweeper)
+        done
+
+        case $kak_session in
+            *[!0-9]*) ;;
+            *) echo "rename-session $randword"
+        esac
+    }
+}

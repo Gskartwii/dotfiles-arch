@@ -1,20 +1,8 @@
 fpath=( $HOME/.config/zsh $fpath )
 
-randsession() {
-	randword=$(shuf -e -n1 chess backgammon checkers hearts solitaire freecell pinball spades minesweeper)
-	while [ -f /run/user/$UID/kakoune/$randword ]; do
-		randword=$(shuf -e -n1 chess backgammon checkers hearts solitaire freecell pinball spades minesweeper)
-	done
-	echo $randword
-}
-
 kakc() {
     /usr/bin/env kak -c $@
 }
-kak() {
-	/usr/bin/env kak -s $(randsession) $@
-}
-
 
 ZSH=$HOME/.local/share/oh-my-zsh
 CASE_SENSITIVE="true"
