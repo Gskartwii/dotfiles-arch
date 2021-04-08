@@ -1,20 +1,30 @@
 outputMode = "active"
-question = "Hello"
+question = ""
 
+#[background]
+#red = 0.596078
+#blue = 0.866667
+#green = 0.7921569
+#opacity = 1.0
 [background]
-red = 0.596078
-blue = 0.866667
-green = 0.7921569
-opacity = 1.0
+red = 0
+blue = 0
+green = 0
+opacity = 0.0
 
+#[border]
+#red = 0.317647
+#blue = 0.77255
+#green = 0.64706
+#opacity = 0.8
 [border]
-red = 0.317647
-blue = 0.77255
-green = 0.64706
-opacity = 0.8
+red = 0
+blue = 0
+green = 0
+opacity = 0.0
 
 [textColor]
-red = 0.96863
-green = 0.96863
-blue = 0.90980
+red = 0.33333
+green = 0.44314
+blue = 0.45490
 opacity = 1.0
