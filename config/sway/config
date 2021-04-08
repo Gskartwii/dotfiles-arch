@@ -244,9 +244,19 @@ input type:touchpad {
 # HDMI configuration for TV
 font "pango:Roboto" # Use a neat font for window bars
 titlebar_padding 8 8
-hide_edge_borders both
-client.unfocused #557174 #f7f7e8 #557174
-client.focused #557174 #9dad7f #f7f7e8
+client.unfocused #557174 #f7f7e8 #557174 #00000000 #c7cfb7
+client.focused_inactive #557174 #f7f7e8 #557174 #00000000 #c7cfb7
+client.focused #557174 #9dad7f #f7f7e8 #00000000 #c7cfb7
+client.urgent #557174 #ffaaa7 #f7f7e8 #00000000 #c7cfb7
+default_border pixel 4
+default_floating_border pixel 4
+
+for_window [app_id="firefoxdeveloperedition"] {
+    border normal 4
+    floating_border normal 4
+}
+
+gaps inner 8
 title_align center
 focus_follows_mouse no
 seat * hide_cursor 3000
