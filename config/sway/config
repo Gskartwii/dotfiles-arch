@@ -222,7 +222,7 @@ set $lock_cmd swaylock --daemonize
 
 set $mode_system System (l) lock, (e) logout (s) suspend, (h) hibernate, (r) reboot, (S) shutdown
 mode "$mode_system" {
-    bindsym l exec $lock_cmd
+    bindsym l exec $lock_cmd, mode "default"
     bindsym e exec swaymsg exit, mode "default"
     bindsym s exec systemctl $lock_cmd && suspend, mode "default"
     bindsym h exec systemctl hibernate, mode "default"
