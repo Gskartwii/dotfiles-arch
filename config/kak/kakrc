@@ -98,7 +98,10 @@ hook global WinSetOption filetype=c %{
 hook global WinSetOption filetype=latex %{
     map window insert <a-a> 'ä'
     map window insert <a-o> 'ö'
+
+    add-highlighter window/ wrap -word -indent
 }
+
 hook global WinSetOption filetype=json %{
     set-option window tabstop 4
     set-option window indentwidth 4
