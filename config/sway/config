@@ -224,7 +224,7 @@ set $mode_system System (l) lock, (e) logout (s) suspend, (h) hibernate, (r) reb
 mode "$mode_system" {
     bindsym l exec $lock_cmd, mode "default"
     bindsym e exec swaymsg exit, mode "default"
-    bindsym s exec systemctl $lock_cmd && suspend, mode "default"
+    bindsym s exec $lock_cmd && systemctl suspend, mode "default"
     bindsym h exec systemctl hibernate, mode "default"
     bindsym r exec systemctl reboot, mode "default"
     bindsym Shift+s exec systemctl poweroff -i, mode 'default"
