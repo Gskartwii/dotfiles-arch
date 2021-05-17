@@ -3,6 +3,9 @@ filetypes = ["rust"]
 roots = ["Cargo.toml"]
 command = "rust-analyzer"
 
+[language.rust.initialization_options]
+checkOnSave.command = "clippy"
+
 [language.go]
 filetypes = ["go"]
 roots = ["Gopkg.toml", "go.mod", ".git", ".hg"]
