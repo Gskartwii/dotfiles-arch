@@ -28,6 +28,10 @@ plug "evanrelf/primer.kak" theme
 plug "caksoylar/kakoune-snow" theme
 plug "nesyamun/nord-kakoune" theme
 plug "vbauerster/second-light" theme
+plug 'delapouite/kakoune-buffers' %{
+  map global user b ': enter-buffers-mode<ret>' -docstring 'buffers'
+  map global user B ': enter-user-mode -lock buffers<ret>' -docstring 'buffers (lock)'
+}
 
 colorscheme primer
 
