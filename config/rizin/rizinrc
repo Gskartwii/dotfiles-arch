@@ -1,0 +1,50 @@
+e asm.bb.middle=true
+e asm.tabs.once=false
+e cfg.fortunes.clippy=true
+e graph.dotted=true
+e hex.style=true
+e scr.pager="less -R"
+e scr.prompt.vi=true
+
+
+ec comment rgb:6a737d 0 italic # gray 600
+ec usrcmt  rgb:586069 0 bold # gray 500
+ec args    rgb:0366d6 # blue 500
+ec fname   rgb:6f42c1 # purple 500
+ec floc    rgb:0366d6 # blue 500
+ec fline   rgb:6d224f # pink 500
+ec flag    rgb:6f42c1 # purple 500
+ec label   rgb:6f42c1 # purple 500
+ec help    rgb:6a737d # gray 600
+ec flow    rgb:6d224f # pink 500
+ec flow2   rgb:6d224f # pink 500
+ec prompt  rgb:000000 0 bold # black
+ec offset  rgb:586069 # gray 500
+ec input   rgb:586069 # gray 500
+ec invalid rgb:6d224f # pink 500
+ec other   rgb:000000 # black
+ec b0x00   rgb:444d56 # gray 700
+ec b0x7f   rgb:2f363d # gray 800
+ec b0xff   rgb:24292e # gray 900
+ec math    rgb:e36209 # orange 600
+ec bin     rgb:28a745 # green 500
+ec btext   rgb:b08800 # yellow 800
+ec push    rgb:cb2431 # red 600
+ec pop     rgb:cb2431 # red 600
+ec crypto  rgb:ffffff rgb:28a745 # white
+ec jmp     rgb:0366d6 # blue 500
+ec cjmp    rgb:032f62 # blue 800
+ec call    rgb:cb2431 # red 600
+ec nop     rgb:6a737d # gray 600
+ec ret     rgb:6d224f # pink 500
+ec trap    rgb:6d224f 0 bold # pink 500
+ec ucall   rgb:cb2431 # red 600
+ec swi     rgb:6d224f # pink 500
+ec cmp     rgb:032f62 # blue 800
+ec reg     rgb:6f42c1 # purple 500
+ec creg    rgb:6f42c1 # purple 500
+ec num     rgb:0366d6 # blue 500
+ec mov     rgb:444d56 # gray 700
+ec func_var rgb:6f42c1 # purple 500
+ec func_var_type rgb:0366d6 # blue 500
+ec func_var_addr rgb:0366d6 # blue 500
