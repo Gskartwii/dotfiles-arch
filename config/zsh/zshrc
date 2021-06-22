@@ -11,7 +11,7 @@ export LD_LIBRARY_PATH="$HOME/.local/lib:/usr/local/lib:$LD_LIBRARY_PATH"
 export MANPATH="/usr/local/man/:$HOME/.local/share/man/:$MANPATH"
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git ssh-agent gpg-agent z)
+plugins=(git ssh-agent gpg-agent)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -29,6 +29,8 @@ voiddb() {
 if [[ -x ~/.config/zsh/zshrc.local ]]; then
 	source ~/.config/zsh/zshrc.local
 fi
+
+eval "$(zoxide init zsh)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/gskw/.sdkman"
