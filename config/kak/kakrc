@@ -78,6 +78,8 @@ hook global WinSetOption filetype=markdown %{
 }
 
 map global user q ':db<ret>' -docstring 'Close buffer'
+unmap global normal *
+map global normal * <a-)>
 
 hook global WinSetOption filetype=rust %{
     set-option window formatcmd 'rustfmt'
