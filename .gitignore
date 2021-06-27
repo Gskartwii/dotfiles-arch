@@ -5,3 +5,4 @@ config/pulse/*
 ssh/*
 !ssh/config
 config/sway/Wallpaper.jpg
+config/fish/fish_variables

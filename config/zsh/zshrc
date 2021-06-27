@@ -39,3 +39,8 @@ eval "$(mcfly init zsh)"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/gskw/.sdkman"
 [[ -s "/home/gskw/.sdkman/bin/sdkman-init.sh" ]] && source "/home/gskw/.sdkman/bin/sdkman-init.sh"
+
+if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]]
+then
+	exec fish
+fi
