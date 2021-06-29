@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 nb=$(checkupdates | wc -l)
 if [ $nb -ne 0 ]; then
