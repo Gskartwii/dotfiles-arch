@@ -62,7 +62,7 @@ plug "KJ_Duncan/kakoune-plantuml.kak" domain "bitbucket.org"
 set-option global tabstop 4
 set-option global indentwidth 4
 set-option global modelinefmt " %%val{bufname}{StatusLineValue}:%%val{cursor_line}:%%val{cursor_char_column}{StatusLine} %%sh{expr $kak_cursor_line \* 100 / $kak_buf_line_count}%%%%  {{context_info}}  {{mode_info}}  {StatusLineValue}%%val{client}@%%val{session}{StatusLine}"
-set-option global ui_options ncurses_set_title=false ncurses_enable_mouse=false
+set-option global ui_options terminal_set_title=false terminal_enable_mouse=false terminal_assistant=none terminal_padding_char=⋯
 set-option global startup_info_version 20200901
 set-option global grepcmd 'rg -Hn --no-heading'
 hook global ModuleLoaded kitty %{
@@ -162,6 +162,7 @@ declare-user-mode wl-clipboard
 map global wl-clipboard y ':wl-clipboard-copy<ret>' -docstring 'Yank'
 map global wl-clipboard p ':wl-clipboard-get p<ret>' -docstring 'Paste after'
 map global wl-clipboard P ':wl-clipboard-get P<ret>' -docstring 'Paste before'
+map global wl-clipboard R ':wl-clipboard-get R<ret>' -docstring 'Replace'
 map global wl-clipboard <a-p> ':wl-clipboard-get "<lt>a-p>"<ret>' -docstring 'Paste after+sel'
 map global wl-clipboard <a-P> ':wl-clipboard-get "<lt>a-P>"<ret>' -docstring 'Paster before+sel'
 map global normal <c-w> ':enter-user-mode wl-clipboard<ret>'
