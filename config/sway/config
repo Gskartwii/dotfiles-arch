@@ -35,11 +35,15 @@ input type:keyboard {
     xkb_layout us,fi
 }
 bindsym $mod+x exec killall -SIGUSR1 waybar
-exec fader.py
+#exec fader.py
 include $HOME/.config/sway/config.local
 exec mako
 
 for_window [app_id="firefoxdeveloperedition"] {
+    border normal 4
+    floating_border normal 4
+}
+for_window [app_id="kitty"] {
     border normal 4
     floating_border normal 4
 }
