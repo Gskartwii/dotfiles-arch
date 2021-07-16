@@ -65,6 +65,19 @@ set-option global modelinefmt " %%val{bufname}{StatusLineValue}:%%val{cursor_
 set-option global ui_options terminal_set_title=false terminal_enable_mouse=false terminal_assistant=none terminal_padding_char=⋯
 set-option global startup_info_version 20200901
 set-option global grepcmd 'rg -Hn --no-heading'
+
+hook global WinCreate .* %{
+    evaluate-commands %sh{
+        echo "set-option -add window ui_options terminal_set_title=$kak_bufname - Kakoune"
+    }
+}
+
+hook global WinSetOption bufname=.* %{
+    evaluate-commands %sh{
+        echo "set-option -add window ui_options terminal_set_title=$kak_bufname - Kakoune"
+    }
+}
+
 hook global ModuleLoaded kitty %{
     set-option global kitty_window_type os-window
 }
