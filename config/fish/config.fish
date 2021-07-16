@@ -24,7 +24,11 @@ function fish_prompt
     set -l path (set_color -ou green)(pwd | sed "s:^$HOME:~:")(set_color normal)
     set -l git_info ""
     if git status >/dev/null 2>/dev/null
-        set git_info (set_color -i yellow)" "(git describe --all --contains HEAD)(set_color normal)
+        set -l branch_name (git rev-parse --abbrev-ref @)
+        if test $branch_name = "HEAD"
+            set branch_name (git describe --all --contains --always HEAD)
+        end
+        set git_info (set_color -i yellow)" $branch_name"(set_color normal)
 
         set -l git_mod ""
 
@@ -33,12 +37,16 @@ function fish_prompt
             set git_mod "$git_mod~"
         end
 
-        if test (git rev-list @..@{u} --count) -ne 0 || test (git rev-list @{u}..@ --count) -ne 0
-            set git_mod "$git_mod^"
-        end
+		if git rev-parse @{u} >/dev/null 2>/dev/null
+            if test (git rev-list @..@{u} --count) -ne 0 || test (git rev-list @{u}..@ --count) -ne 0
+                set git_mod "$git_mod^"
+            end
 
-        if test -n "$git_mod"
-            set git_mod " "(set_color -o brred)"$git_mod"(set_color normal)
+            if test -n "$git_mod"
+                set git_mod " "(set_color -o brred)"$git_mod"(set_color normal)
+            end
+        else
+            set git_mod " "(set_color -o brred)"?"(set_color normal)
         end
 
         set git_info $git_info$git_mod
