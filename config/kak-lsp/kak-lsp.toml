@@ -2,8 +2,9 @@
 filetypes = ["rust"]
 roots = ["Cargo.toml"]
 command = "rust-analyzer"
+settings_section = "initialization_options"
 
-[language.rust.initialization_options]
+[language.rust.settings.initialization_options]
 checkOnSave.command = "clippy"
 
 [language.go]
