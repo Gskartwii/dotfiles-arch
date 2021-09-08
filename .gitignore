@@ -1,4 +1,5 @@
 config/kak/plugins/
+config/kak/colors/
 config/pulse/*
 !config/pulse/default.pa
 *.local
