@@ -19,6 +19,8 @@ plug "ul/kak-lsp" do %{
 
     map global user d ':lsp-diagnostics<ret>' -docstring 'Diagnostics'
     map global user l ':enter-user-mode lsp<ret>' -docstring 'LSP Mode'
+    set-face global DiagnosticWarning ,,rgb:b08800+bc
+    set-face global DiagnosticError ,,rgb:cb2431+bc
     lsp-auto-hover-insert-mode-enable
 }
 
