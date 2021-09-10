@@ -2,6 +2,6 @@
 
 TMPFILE="$(mktemp)"
 sudo true
-rate-arch-mirrors --max-delay=21600 --save=$TMPFILE --entry-country=FI \
+rate-mirrors --save=$TMPFILE --entry-country=FI arch  \
   && sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup \
   && sudo mv $TMPFILE /etc/pacman.d/mirrorlist
