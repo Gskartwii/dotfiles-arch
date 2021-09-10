@@ -181,3 +181,11 @@ map global wl-clipboard R ':wl-clipboard-get R<ret>' -docstring 'Replace'
 map global wl-clipboard <a-p> ':wl-clipboard-get "<lt>a-p>"<ret>' -docstring 'Paste after+sel'
 map global wl-clipboard <a-P> ':wl-clipboard-get "<lt>a-P>"<ret>' -docstring 'Paster before+sel'
 map global normal <c-w> ':enter-user-mode wl-clipboard<ret>'
+
+evaluate-commands %sh{
+    if [ $TERM = "xterm-kitty" ]; then
+        echo nop
+    else
+        echo "colorscheme base16"
+    fi
+}
