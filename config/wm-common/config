@@ -9,7 +9,7 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term kitty
-set $browser "firefox-developer-edition"
+set $browser librewolf
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -166,8 +166,6 @@ mode "$mode_system" {
 bindsym $mod+Pause mode "$mode_system"
 set $term kitty
 
-# HDMI configuration for TV
-font "pango:Roboto" # Use a neat font for window bars
 client.unfocused #557174 #f7f7e8 #557174 #00000000 #c7cfb7
 client.focused_inactive #557174 #f7f7e8 #557174 #00000000 #c7cfb7
 client.focused #557174 #9dad7f #f7f7e8 #00000000 #c7cfb7

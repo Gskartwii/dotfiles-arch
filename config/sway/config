@@ -18,7 +18,6 @@ bar {
     swaybar_command waybar
 }
 
-
 input type:touchpad {
     tap enabled
     natural_scroll enabled
@@ -35,11 +34,10 @@ input type:keyboard {
     xkb_layout us,fi
 }
 bindsym $mod+x exec killall -SIGUSR1 waybar
-#exec fader.py
 include $HOME/.config/sway/config.local
 exec mako
 
-for_window [app_id="firefoxdeveloperedition"] {
+for_window [app_id="(firefoxdeveloperedition|librewolf)"] {
     border normal 4
     floating_border normal 4
 }
@@ -47,4 +45,7 @@ for_window [app_id="kitty"] {
     border normal 4
     floating_border normal 4
 }
+
+font pango:Roboto 12
+
 titlebar_padding 8 8
