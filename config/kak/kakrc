@@ -160,7 +160,7 @@ hook global ClientCreate .* %{
 
 define-command -hidden wl-clipboard-copy %{
     nop %sh{
-        wl-copy -- "$kak_main_reg_dquote" &> /dev/null
+        wl-copy "$kak_quoted_selections" &> /dev/null
     }
 }
 
