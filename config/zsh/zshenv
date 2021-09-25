@@ -6,7 +6,7 @@ export TEXMFVAR=$HOME/.cache/texlive
 export TEXMFCONFIG=$home/.config/texlive
 
 export EDITOR=kak
-export BROWSER=firefox-developer-edition
+export BROWSER=librewolf
 export KEYFILE=$HOME/.config/void/KEYFILE
 export GOPATH=$HOME/go
 
