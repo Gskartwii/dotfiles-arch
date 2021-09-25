@@ -32,6 +32,7 @@ toggle_show_logs:C-l
 enter_command::
 find_task:t
 yank_paste_node:y
+move_paste_node:m
 raise_selected:K
 lower_selected:J
 search:/
