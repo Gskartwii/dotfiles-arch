@@ -65,6 +65,7 @@ window#waybar.hidden {
 #idle_inhibitor,
 #mpd,
 #custom-pacman,
+#custom-language,
 #disk {
     padding: 0 8px;
     margin: 0 4px;
@@ -133,6 +134,10 @@ label:focus {
 
 #language {
     background-color: transparent;
+}
+
+#custom-language {
+    background-color: #98ddca;
 }
 
 #custom-pacman {

@@ -1,7 +1,7 @@
 {
     "height": 30,
     "modules-left": ["sway/workspaces", "custom/swayscratch", "sway/mode"],
-    "modules-right": ["idle_inhibitor", "pulseaudio#sink", "pulseaudio#source", "network", "backlight", "cpu", "memory", "disk", "custom/pacman", "sway/language", "battery", "custom/date", "custom/clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio#sink", "pulseaudio#source", "network", "backlight", "cpu", "memory", "disk", "custom/pacman", "custom/language", "battery", "custom/date", "custom/clock"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -82,12 +82,20 @@
         "format-source-muted": "<span size=\"12000\"></span>",
         "on-click": "pavucontrol -t 4",
     },
-    "sway/language": {
-        "format": "<span size=\"12000\"></span> {}"
+    //"sway/language": {
+    //    "format": "<span size=\"12000\"></span> {}"
+    //},
+    "custom/language": {
+        "format": "<span size=\"12000\"></span> {}",
+        "exec": "waybar-keyboard",
+        "interval": "once",
+        "signal": 7
     },
     "custom/swayscratch": {
         "format": "<span size=\"12000\"></span> {}",
-        "exec": "scratchpad_length"
+        "exec": "scratchpad_length",
+        "interval": "once",
+        "signal": 7
     },
     "custom/pacman": {
         "format": " {}",

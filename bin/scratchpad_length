@@ -1,3 +1,6 @@
 #!/bin/bash
 
-swaymsg -t get_tree | jq ".nodes[] | select(.name == \"__i3\").nodes[] | select(.name == \"__i3_scratch\").floating_nodes | length"
+length=$(swaymsg -t get_tree | jq ".nodes[] | select(.name == \"__i3\").nodes[] | select(.name == \"__i3_scratch\").floating_nodes | length")
+if [ $length -ne 0 ]; then
+    echo $length
+fi
