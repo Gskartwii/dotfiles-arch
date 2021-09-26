@@ -1,6 +1,12 @@
-font="pango:Roboto 11"
+font="pango:Noto 11"
+format=<b><span size="15000">%s</span></b>\n\n%b
+background-color=#F7F7E8FF
+border-color=#557174FF
+text-color=#557174FF
+progress-color=over #FFD3B4FF
 width=320
 height=240
 margin=8
 padding=8
 border-radius=4
+anchor=top-right
