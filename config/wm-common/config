@@ -171,7 +171,7 @@ client.focused_inactive #557174 #f7f7e8 #557174 #00000000 #c7cfb7
 client.focused #557174 #9dad7f #f7f7e8 #00000000 #c7cfb7
 client.urgent #557174 #ffaaa7 #f7f7e8 #00000000 #c7cfb7
 default_border pixel 4
-default_floating_border pixel 4
+default_floating_border none
 
 gaps inner 8
 title_align center

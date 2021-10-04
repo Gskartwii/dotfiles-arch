@@ -37,13 +37,18 @@ bindsym $mod+x exec killall -SIGUSR1 waybar
 include $HOME/.config/sway/config.local
 exec mako
 
-for_window [app_id="(firefoxdeveloperedition|librewolf)"] {
+for_window [app_id="(firefox|librewolf)"] {
     border normal 4
     floating_border normal 4
 }
 for_window [app_id="kitty"] {
     border normal 4
     floating_border normal 4
+}
+
+for_window [app_id="(firefox|librewolf)" title="Sharing Indicator"] {
+    floating enable
+    border none
 }
 
 font pango:Roboto 12
