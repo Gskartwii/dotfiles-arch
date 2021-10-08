@@ -1,7 +1,7 @@
 {
     "height": 30,
     "modules-left": ["sway/workspaces", "custom/swayscratch", "sway/mode"],
-    "modules-right": ["idle_inhibitor", "pulseaudio#sink", "pulseaudio#source", "network", "backlight", "cpu", "memory", "disk", "custom/pacman", "custom/language", "battery", "custom/date", "custom/clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio#sink", "pulseaudio#source", "network", "backlight", "cpu", "memory", "disk", "custom/virsh", "custom/pacman", "custom/language", "battery", "custom/date", "custom/clock"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -103,6 +103,13 @@
         "exec": "waybar-updates",             // # of updates
         "exec-if": "exit 0",                  // always run; consider advanced run conditions
         "signal": 8
+    },
+    "custom/virsh": {
+        "format": "<span size=\"12000\"></span> VM {}",
+        "interval": 5,
+        "exec": "virsh --connect qemu:///system list | grep win10 | choose 2",
+        "exec-if": "which virsh >& /dev/null",
+        "on-click": "looking-glass-client app:renderer=opengl win:fullScreen=yes win:showFPS=yes input:ignoreWindowsKeys=yes"
     },
     "disk": {
         "interval": 600,

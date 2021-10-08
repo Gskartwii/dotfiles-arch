@@ -65,6 +65,7 @@ window#waybar.hidden {
 #idle_inhibitor,
 #mpd,
 #custom-pacman,
+#custom-virsh,
 #custom-language,
 #disk {
     padding: 0 8px;
@@ -142,4 +143,8 @@ label:focus {
 
 #custom-pacman {
     background-color: #98ddca;
+}
+
+#custom-virsh {
+    background-color: transparent;
 }
