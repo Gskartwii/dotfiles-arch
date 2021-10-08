@@ -1,6 +1,3 @@
-set $lock_cmd swaylock --daemonize
-set $exit_cmd swaymsg exit
-
 include /etc/sway/config.d/*
 include $HOME/.config/wm-common/config
 
@@ -8,25 +5,12 @@ output * bg $HOME/.config/sway/Wallpaper.jpg fill
 floating_modifier $mod normal
 bindsym $mod+Shift+e exec swaymsg exit
 
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    pango_markup enabled
-    font "pango:Roboto"
-    swaybar_command waybar
-}
-
 input type:touchpad {
     tap enabled
     natural_scroll enabled
 }
 
-exec swayidle -w \
-    timeout 300 '$lock_cmd' \
-    timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-    before-sleep '$lock_cmd'
+exec "systemctl --user import-environment; systemctl --user start sway-session.target"
 
 seat * hide_cursor 3000
 
