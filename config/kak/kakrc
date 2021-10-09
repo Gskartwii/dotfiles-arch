@@ -66,7 +66,7 @@ set-option global tabstop 4
 set-option global indentwidth 4
 set-option global modelinefmt " %%val{bufname}{StatusLineValue}:%%val{cursor_line}:%%val{cursor_char_column}{StatusLine} %%sh{expr $kak_cursor_line \* 100 / $kak_buf_line_count}%%%%  {{context_info}}  {{mode_info}}  {StatusLineValue}%%val{client}@%%val{session}{StatusLine}"
 set-option global ui_options terminal_set_title=false terminal_enable_mouse=false terminal_assistant=none terminal_padding_char=⋯
-set-option global startup_info_version 20200901
+set-option global startup_info_version 20210828
 set-option global grepcmd 'rg -Hn --no-heading'
 
 hook global WinCreate .* %{
@@ -160,7 +160,7 @@ hook global ClientCreate .* %{
 
 define-command -hidden wl-clipboard-copy %{
     nop %sh{
-        wl-copy "$kak_quoted_selections" &> /dev/null
+        printf "%s\n" "$kak_selection" | wl-copy &> /dev/null
     }
 }
 
