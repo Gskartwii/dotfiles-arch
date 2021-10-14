@@ -1,7 +1,6 @@
 include /etc/sway/config.d/*
 include $HOME/.config/wm-common/config
 
-output * bg $HOME/.config/sway/Wallpaper-new.png fill
 floating_modifier $mod normal
 bindsym $mod+Shift+e exec swaymsg exit
 
