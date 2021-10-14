@@ -41,6 +41,9 @@ plug 'delapouite/kakoune-buffers' %{
 colorscheme primer
 set-face global Default default # allow background image to show up
 set-face global StatusLine default
+set-face global StatusLineInfo default
+set-face global StatusLineMode rgb:0366d6,default
+set-face global StatusLineValue rgb:ea4aaa,default
 
 plug "danr/kakoune-easymotion" config %{
 	map global user e ':enter-user-mode easymotion<ret>' -docstring 'Easymotion'
@@ -75,13 +78,13 @@ set-option global grepcmd 'rg -Hn --no-heading'
 
 hook global WinCreate .* %{
     evaluate-commands %sh{
-        echo "set-option -add window ui_options terminal_set_title=$kak_bufname - Kakoune"
+        echo "set-option -add window ui_options terminal_set_title=$kak_bufname:::Kakoune"
     }
 }
 
 hook global WinSetOption bufname=.* %{
     evaluate-commands %sh{
-        echo "set-option -add window ui_options terminal_set_title=$kak_bufname - Kakoune"
+        echo "set-option -add window ui_options terminal_set_title=$kak_bufname:::Kakoune"
     }
 }
 
