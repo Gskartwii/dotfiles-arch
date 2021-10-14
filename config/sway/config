@@ -1,7 +1,7 @@
 include /etc/sway/config.d/*
 include $HOME/.config/wm-common/config
 
-output * bg $HOME/.config/sway/Wallpaper.jpg fill
+output * bg $HOME/.config/sway/Wallpaper-new.png fill
 floating_modifier $mod normal
 bindsym $mod+Shift+e exec swaymsg exit
 
@@ -26,6 +26,10 @@ for_window [app_id="(firefox|librewolf)"] {
     floating_border normal 4
 }
 for_window [app_id="kitty"] {
+    border normal 4
+    floating_border normal 4
+}
+for_window [class="kitty"] {
     border normal 4
     floating_border normal 4
 }
