@@ -4,6 +4,14 @@ roots = ["Cargo.toml"]
 command = "rust-analyzer"
 settings_section = "initialization_options"
 
+[[semantic_tokens]]
+token = "enum"
+face = "enum"
+
+[[semantic_tokens]]
+token = "parameter"
+face = "parameter"
+
 [language.rust.settings.initialization_options]
 checkOnSave.command = "clippy"
 
