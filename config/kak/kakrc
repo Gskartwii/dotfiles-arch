@@ -40,11 +40,23 @@ plug 'delapouite/kakoune-buffers' %{
 }
 
 colorscheme one-light
+one-enable-fancy-underlines
 set-face global Default default # allow background image to show up
 set-face global StatusLine default
 set-face global StatusLineInfo default
 set-face global StatusLineMode rgb:0366d6,default
 set-face global StatusLineValue rgb:ea4aaa,default
+
+define-command -hidden -params 3 set-blended-color %{
+    set-face global %arg{1} "default,rgb:%sh{$HOME/.config/kak/blend-alpha.py $kak_opt_bg $2 $3}"
+}
+
+set-blended-color PrimarySelection %opt{blue} %opt{selectionalpha}
+set-blended-color SecondarySelection %opt{green} %opt{selectionalpha}
+set-blended-color PrimaryCursor %opt{blue} %opt{cursoralpha}
+set-blended-color SecondaryCursor %opt{green} %opt{cursoralpha}
+set-blended-color PrimaryCursorEol %opt{lightred} %opt{cursoralpha}
+set-blended-color SecondaryCursorEol %opt{darkorange} %opt{cursoralpha}
 
 plug "danr/kakoune-easymotion" config %{
 	map global user e ':enter-user-mode easymotion<ret>' -docstring 'Easymotion'
