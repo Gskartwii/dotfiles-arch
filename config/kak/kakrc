@@ -2,8 +2,7 @@ source "%val{config}/plugins/plug.kak/rc/plug.kak"
 
 plug "andreyorst/plug.kak" noload
 plug "kak-lsp/kak-lsp" do %{
-    cargo build --release --locked
-    cargo install --force --path .
+    cargo install --locked --force --path .
 } config %{
     # set-option global lsp_cmd "/home/gskw/.config/kak/plugins/kak-lsp/target/debug/kak-lsp -s %val{session}"
     hook global WinSetOption filetype=(rust|go|scala) %{
