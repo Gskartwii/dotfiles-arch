@@ -90,7 +90,7 @@ plug "KJ_Duncan/kakoune-plantuml.kak" domain "bitbucket.org"
 
 set-option global tabstop 4
 set-option global indentwidth 4
-set-option global modelinefmt " %%val{bufname}{StatusLineValue}:%%val{cursor_line}:%%val{cursor_char_column}{StatusLine} %%sh{expr $kak_cursor_line \* 100 / $kak_buf_line_count}%%%%  {{context_info}}  {{mode_info}}  {StatusLineValue}%%val{client}@%%val{session}{StatusLine}"
+set-option global modelinefmt " %%val{bufname}{StatusLineValue}:%%val{cursor_line}:%%val{cursor_char_column}{StatusLine} %%sh{expr $kak_cursor_line \* 100 / $kak_buf_line_count}%%%%  %%opt{lsp_modeline}{{context_info}}  {{mode_info}}  {StatusLineValue}%%val{client}@%%val{session}{StatusLine}"
 set-option global ui_options terminal_set_title=false terminal_enable_mouse=false terminal_assistant=none terminal_padding_char=⋯
 set-option global startup_info_version 20210828
 set-option global grepcmd 'rg -Hn --no-heading'
