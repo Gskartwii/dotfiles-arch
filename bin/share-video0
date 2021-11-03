@@ -1,0 +1,10 @@
+#!/bin/env bash
+
+set -euo pipefail
+
+pkill wf-recorder || true
+sudo rmmod v4l2loopback
+sudo modprobe v4l2loopback devices=2 exclusive_caps=1  card_label=WfRecorder,Android
+wf-recorder --muxer=v4l2 --codec=rawvideo --file=/dev/video0 -x yuv420p -o $(slurp -o -f %o) &
+run-videochat -v -d /dev/video1 -w 1280 -h 720
+pkill wf-recorder
