@@ -61,3 +61,8 @@ function fish_prompt
 	echo -e ""
     echo -n "$username$path$git_info$prompt_char "
 end
+
+if test (ssh-add -L) = "The agent has no identities."
+    echo "Input SSH key passphrase, or press <ret> to skip."
+    ssh-add
+end
