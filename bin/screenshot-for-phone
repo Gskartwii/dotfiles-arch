@@ -1,0 +1,7 @@
+#!/bin/env bash
+
+set -euo pipefail
+
+name=/tmp/screenshot-$(basename $(mktemp)).png
+slurp -b '#AFAFAFAF' -c '#FF3F3FAF' -s '#00000000' -w 3 -d | grim -g - $name
+kdeconnect-cli -d $(kdeconnect-cli -a --id-only) --share $name || notify-send "Screenshot failed" "Failed to send screenshot to phone"
