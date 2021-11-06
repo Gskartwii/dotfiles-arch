@@ -1,4 +1,5 @@
 include /etc/sway/config.d/*
+set $exit_cmd swaymsg exit
 include $HOME/.config/wm-common/config
 
 floating_modifier $mod normal
@@ -36,6 +37,10 @@ for_window [class="kitty"] {
 for_window [app_id="(firefox|librewolf)" title="Sharing Indicator"] {
     floating enable
     border none
+}
+
+for_window [app_id="zoom" title="zoom"] {
+    floating enable
 }
 
 font pango:Roboto 12
