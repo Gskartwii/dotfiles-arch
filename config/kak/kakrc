@@ -41,8 +41,8 @@ plug "nesyamun/nord-kakoune" theme
 plug "vbauerster/second-light" theme
 plug "raiguard/one.kak" theme
 plug 'delapouite/kakoune-buffers' %{
-  map global user b ': enter-buffers-mode<ret>' -docstring 'buffers'
-  map global user B ': enter-user-mode -lock buffers<ret>' -docstring 'buffers (lock)'
+    map global user b ': enter-buffers-mode<ret>' -docstring 'buffers'
+    map global user B ': enter-user-mode -lock buffers<ret>' -docstring 'buffers (lock)'
 }
 
 colorscheme one-light
@@ -216,3 +216,25 @@ evaluate-commands %sh{
         echo "colorscheme base16"
     fi
 }
+
+# Thank you so much @cipharius
+provide-module luau %{
+    define-command luau-hover-instructions %{
+        info -style below \
+            -anchor "%val{cursor_line}.%val{cursor_char_column}" \
+            %sh{luau --compile "$kak_buffile" | sed -ne "/^\s\+$kak_cursor_line:/,/^\(\s\+\|$\)/{//!p;}"}
+    }
+
+    hook global WinSetOption filetype=lua %{
+        map -docstring "Show current line instructions" \
+            window user i ": luau-hover-instructions<ret>"
+        map -docstring "Keep hover instructions" window user I %{
+            :hook -group luau-hover window NormalIdle .* luau-hover-instructions
+        }
+        map -docstring "Hide hover instructions" window user <a-i> %{
+            :remove-hooks window luau-hover
+        }
+    }
+}
+
+require-module luau
