@@ -46,3 +46,5 @@ for_window [app_id="zoom" title="zoom"] {
 font pango:Roboto 12
 
 titlebar_padding 8 8
+
+bindsym $mod+m exec screenshot-for-phone
