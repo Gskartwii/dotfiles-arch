@@ -43,6 +43,10 @@ for_window [app_id="zoom" title="zoom"] {
     floating enable
 }
 
+for_window [app_id="sirula"] {
+    floating enable
+}
+
 font pango:Roboto 12
 
 titlebar_padding 8 8

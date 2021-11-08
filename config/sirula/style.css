@@ -1,0 +1,83 @@
+* {
+    font-family: Roboto;
+    font-size: 16px;
+    color: #557174;
+}
+
+.background {
+    background: transparent;
+}
+
+#root-box, .background, #app-list, .overlay-indicator {
+    background: #F7F7E8;
+}
+
+.app-row {
+    transition: unset;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 0 3px;
+    background-clip: padding-box;
+}
+
+.app-row:focus {
+    outline: unset;
+}
+
+.app-row:hover:selected {
+    background-color: alpha(#D5ECC2, 0.5);
+    color: #557174;
+}
+
+.app-row:hover {
+    background-color: #C7CFB7;
+}
+
+.app-row:selected {
+    background-color: #D5ECC2;
+    color: #557174;
+}
+
+.app-row:hover.selected {
+    background-color: alpha(#D5ECC2, 0.5);
+    color: #557174;
+}
+
+.app-label {
+    margin-left: 10px;
+}
+
+#app-list {
+   padding: 0 5px;
+}
+
+#root-box {
+    min-width: 300px;
+}
+
+scrollbar.vertical slider {
+    background-color: alpha(white, 0.15);
+}
+
+#search {
+    background: transparent;
+    border: unset;
+    outline: unset;
+    box-shadow: inset 0px 0px 0px 1px alpha(#9DAD7F, 0.5);
+    margin: 10px 5px 10px 5px;
+    font-size: 18px;
+    padding: 2px 8px;
+}
+
+selection {
+    background-color: alpha(#98DDCA, 0.5);
+    color: black;
+}
+
+#root-box {
+    border-width: 4px;
+    border-color: #C7CFB7;
+    border-radius: 8px;
+    border-style: solid;
+}
+
