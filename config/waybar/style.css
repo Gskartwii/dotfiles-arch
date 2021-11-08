@@ -20,14 +20,18 @@ window#waybar.hidden {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 5px;
     background-color: transparent;
     color: #557174;
+    border-radius: 15px;
+    margin-left: 4px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
+    box-shadow: inherit;
+    text-shadow: inherit;
     color: #f7f7e8;
 }
 
