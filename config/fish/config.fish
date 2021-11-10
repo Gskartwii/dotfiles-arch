@@ -13,6 +13,7 @@ alias gl="git pull"
 alias gp="git push"
 alias gd="git diff"
 alias gdc="git diff --cached"
+alias rcopy="rsync -atuvv"
 
 function voiddb
     void $HOME/.config/void/db/$argv[1].db
