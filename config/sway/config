@@ -23,18 +23,18 @@ bindsym $mod+c exec killall -SIGUSR2 waybar
 include $HOME/.config/sway/config.local
 exec mako
 
+workspace 📅 output $primary
+assign [app_id="kitty" title="void"] workspace 📅
+bindsym $mod+shift+t workspace 📅
+exec kitty '/home/gskw/.cargo/bin/void' '/home/gskw/.config/void/db/aalto.db'
+
 workspace  output $primary
-assign [app_id="kitty"] workspace 
+assign [app_id="kitty" title="(zsh|fish)"] workspace 
 bindsym $mod+t workspace 
 
 workspace  output $secondary
 assign [app_id="(firefox|librewolf)"] workspace 
 bindsym $mod+shift+f workspace 
-
-workspace 📅 output $primary
-assign [app_id="kitty" title="void"] workspace 📅
-bindsym $mod+shift+t workspace 📅
-exec kitty zsh -c '/home/gskw/.cargo/bin/void /home/gskw/.config/void/db/aalto.db'
 
 for_window [app_id="(firefox|librewolf)"] {
     border normal 4
