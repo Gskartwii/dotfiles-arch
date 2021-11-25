@@ -94,7 +94,7 @@
     "custom/swayscratch": {
         "format": "<span size=\"12000\"></span> {}",
         "exec": "scratchpad_length",
-        "interval": "once",
+        "interval": 5,
         "signal": 7
     },
     "custom/pacman": {
