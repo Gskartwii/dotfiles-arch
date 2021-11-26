@@ -25,7 +25,6 @@ exec mako
 
 bindsym $mod+v workspace 📅
 bindsym $mod+shift+v move window to workspace 📅
-exec kitty '/home/gskw/.cargo/bin/void' '/home/gskw/.config/void/db/aalto.db'
 
 workspace  output $primary
 assign [app_id="kitty"] workspace 
