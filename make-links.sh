@@ -22,7 +22,6 @@ done
 mkdir -p $BASETARGET/.local/bin
 for bin in ./bin/*; do
     bin=${bin##*/}
-    echo $bin
     [[ -L "$BASETARGET/.local/bin/$bin" ]] && rm "$BASETARGET/.local/bin/$bin"
     [[ -e "$BASETARGET/.local/bin/$bin" ]] && echo "Skipping $BASETARGET/.local/bin/$bin"
     ln -s $WD/bin/$bin $BASETARGET/.local/bin/$bin

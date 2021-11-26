@@ -1,5 +1,7 @@
-Include config.local
-AddKeysToAgent yes
-
 Host *.aalto.fi
 	User hannula7
+
+Host theseus
+	HostName theseus.dy.fi
+
+Include /home/gskw/.ssh/config.local
