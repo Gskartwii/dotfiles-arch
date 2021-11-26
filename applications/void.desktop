@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Exec=kitty /home/gskw/.cargo/bin/void /home/gskw/.config/void/db/aalto.db
+Name=Void Calendar, Aalto

@@ -1,4 +1,6 @@
-#!/bin/bash
+#/!/bin/bash
+
+set -euo pipefail
 
 BASETARGET=${1:-$HOME}
 TARGET=$BASETARGET/.config
@@ -20,10 +22,20 @@ done
 mkdir -p $BASETARGET/.local/bin
 for bin in ./bin/*; do
     bin=${bin##*/}
+    echo $bin
     [[ -L "$BASETARGET/.local/bin/$bin" ]] && rm "$BASETARGET/.local/bin/$bin"
     [[ -e "$BASETARGET/.local/bin/$bin" ]] && echo "Skipping $BASETARGET/.local/bin/$bin"
     ln -s $WD/bin/$bin $BASETARGET/.local/bin/$bin
 done
+
+mkdir -p $BASETARGET/.local/share/applications
+for app in ./applications/*; do
+    app=${app##*/}
+    [[ -L "$BASETARGET/.local/share/applications/$app" ]] && rm "$BASETARGET/.local/share/applications/$app"
+    [[ -e "$BASETARGET/.local/share/applications/$app" ]] && echo "Skipping $BASETARGET/.local/share/applications/$bin"
+    ln -s $WD/applications/$app $BASETARGET/.local/share/applications/$app
+done
+update-desktop-database $BASETARGET/.local/share/applications
 
 [[ ! -d $TARGET/kak/plugins ]] && mkdir $TARGET/kak/plugins
 
