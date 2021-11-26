@@ -1,13 +1,9 @@
 fpath=( $HOME/.config/zsh $fpath )
 
 CASE_SENSITIVE="true"
-export PATH="/usr/local/go/bin:$HOME/go/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH"
-export LD_LIBRARY_PATH="$HOME/.local/lib:/usr/local/lib:$LD_LIBRARY_PATH"
-export MANPATH="/usr/local/man/:$HOME/.local/share/man/:$MANPATH"
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 export MCFLY_LIGHT=TRUE
 export MCFLY_KEY_SCHEME=vim
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export GPG_TTY=$(tty)
 
 if [[ -x ~/.config/zsh/zshrc.local ]]; then
