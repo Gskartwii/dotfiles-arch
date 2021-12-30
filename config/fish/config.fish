@@ -64,6 +64,5 @@ function fish_prompt
 end
 
 if test (ssh-add -L) = "The agent has no identities."
-    echo "Input SSH key passphrase, or press <ret> to skip."
     ssh-add
 end
