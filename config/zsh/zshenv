@@ -5,6 +5,7 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export MATLAB_LOG_DIR=/tmp
 export TEXMFVAR=$HOME/.cache/texlive
 export TEXMFCONFIG=$home/.config/texlive
+export WLR_NO_HARDWARE_CURSORS=1
 
 export EDITOR=kak
 export BROWSER=librewolf

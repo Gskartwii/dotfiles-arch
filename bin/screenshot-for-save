@@ -1,0 +1,6 @@
+#!/bin/env bash
+
+set -euo pipefail
+
+name=$(xdg-user-dir PICTURES)/screenshot/screenshot-$(date +%F_%H.%M.%S).png
+slurp -b '#AFAFAFAF' -c '#FF3F3FAF' -s '#00000000' -w 3 -d | grim -g - $name

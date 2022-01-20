@@ -67,3 +67,4 @@ font pango:Roboto 12
 titlebar_padding 8 8
 
 bindsym $mod+m exec screenshot-for-phone
+bindsym $mod+Print exec screenshot-for-save
