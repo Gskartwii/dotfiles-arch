@@ -15,4 +15,4 @@ if [[ -x $HOME/.config/sway/env.sh ]]; then
     source $HOME/.config/sway/env.sh
 fi
 
-systemd-cat --identifier=sway sway --my-next-gpu-wont-be-nvidia $@
+systemd-cat --identifier=sway sway --unsupported-gpu $@
