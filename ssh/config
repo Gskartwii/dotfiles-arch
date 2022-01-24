@@ -4,4 +4,7 @@ Host *.aalto.fi
 Host theseus
 	HostName theseus.dy.fi
 
+Host maya
+	User alarm
+
 Include /home/gskw/.ssh/config.local
