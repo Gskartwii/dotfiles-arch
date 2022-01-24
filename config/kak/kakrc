@@ -25,6 +25,7 @@ plug "kak-lsp/kak-lsp" do %{
 	set global lsp_diagnostic_line_hint_sign '‼'
     set global lsp_diagnostic_line_error_sign '⨯'
     set global lsp_diagnostic_line_warning_sign ''
+    set global lsp_auto_show_code_actions 'true'
 
     map global user d ':lsp-diagnostics<ret>' -docstring 'Diagnostics'
     map global user l ':enter-user-mode lsp<ret>' -docstring 'LSP Mode'
