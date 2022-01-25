@@ -1,0 +1,6 @@
+[Unit]
+Description=Update Pacman mirrors
+
+[Service]
+Type=oneshot
+ExecStart=update-mirrors

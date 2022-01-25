@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -euo pipefail
+TMPFILE="$(mktemp)"
+
+chown gskw:gskw $TMPFILE
+sudo -u gskw rate-mirrors --save=$TMPFILE --entry-country=FI arch
+chown root:root $TMPFILE
+chmod 644 $TMPFILE
+
+mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup
+mv $TMPFILE /etc/pacman.d/mirrorlist
