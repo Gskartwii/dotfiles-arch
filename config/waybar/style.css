@@ -54,6 +54,7 @@ window#waybar.hidden {
 
 #custom-clock,
 #custom-date,
+#custom-weather,
 #clock,
 #language,
 #battery,
@@ -80,6 +81,15 @@ window#waybar.hidden {
 #window,
 #workspaces {
     margin: 0 4px;
+}
+
+.modules-right widget {
+    border-right-style: dashed;
+    border-right-color: #557174;
+    border-right-width: 2px;
+}
+.modules-right widget:last-child {
+    border: none;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
