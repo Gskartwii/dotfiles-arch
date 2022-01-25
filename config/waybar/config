@@ -22,7 +22,7 @@
     },
     "custom/weather": {
         "interval": 60,
-        "exec": "http wttr.in\\?format=1"
+        "exec": "http wttr.in\\?format=1 || http wttr.in\\?format=1 || echo ''"
     },
     "cpu": {
         "states": {
