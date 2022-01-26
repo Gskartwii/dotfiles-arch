@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+if ping -c 1 wttr.in >& /dev/null; then
+    http wttr.in\?format=1
+fi
