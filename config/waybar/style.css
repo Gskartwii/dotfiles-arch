@@ -52,31 +52,6 @@ window#waybar.hidden {
     margin: 0 4px;
 }
 
-#custom-clock,
-#custom-date,
-#custom-weather,
-#clock,
-#language,
-#battery,
-#cpu,
-#memory,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#mpd,
-#custom-pacman,
-#custom-virsh,
-#custom-language,
-#disk {
-    padding: 0 12px;
-    color: #557174;
-}
-
 #window,
 #workspaces {
     margin: 0 4px;
@@ -86,6 +61,8 @@ window#waybar.hidden {
     border-right-style: dashed;
     border-right-color: #557174;
     border-right-width: 2px;
+    padding: 0 12px;
+    color: #557174;
 }
 .modules-right widget:last-child * {
     border: none;
@@ -155,7 +132,7 @@ label:focus {
     background-color: transparent;
 }
 
-#custom-language {
+#custom-language, #custom-keystate {
     background-color: #98ddca;
 }
 

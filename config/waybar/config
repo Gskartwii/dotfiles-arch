@@ -1,7 +1,7 @@
 {
     "height": 30,
     "modules-left": ["sway/workspaces", "custom/swayscratch", "sway/mode"],
-    "modules-right": ["idle_inhibitor", "pulseaudio#sink", "network", "cpu", "memory", "disk", "custom/virsh", "custom/pacman", "custom/language", "battery", "custom/weather", "custom/date", "custom/clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio#sink", "network", "cpu", "memory", "disk", "custom/virsh", "custom/pacman", "custom/keystate", "custom/language", "battery", "custom/weather", "custom/date", "custom/clock"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -87,6 +87,11 @@
     //"sway/language": {
     //    "format": "<span size=\"12000\"></span> {}"
     //},
+    "custom/keystate": {
+        "exec": "key-states",
+        "interval": "once",
+        "signal": 6
+    },
     "custom/language": {
         "format": "<span size=\"12000\"></span> {}",
         "exec": "waybar-keyboard",

@@ -79,3 +79,12 @@ bindsym Shift+XF86AudioRaiseVolume exec pamixer -ui 1 && pamixer --get-volume > 
 bindsym Shift+XF86AudioLowerVolume exec pamixer -ud 1 && pamixer --get-volume > $XDG_RUNTIME_DIR/wob.sock
 bindsym Shift+XF86MonBrightnessUp exec light -A 1 && light -G | jq '.|round' > $XDG_RUNTIME_DIR/wob-backlight.sock
 bindsym Shift+XF86MonBrightnessDown exec light -U 1 && light -G | jq '.|round' > $XDG_RUNTIME_DIR/wob-backlight.sock
+
+# These keys are sticky, we need to bind on both press and release in order to
+# detect all state changes and report to waybar.
+bindsym Num_Lock exec pkill -RTMIN+6 waybar
+bindsym Caps_Lock exec pkill -RTMIN+6 waybar
+bindsym Scroll_Lock exec pkill -RTMIN+6 waybar
+bindsym --release Num_Lock exec pkill -RTMIN+6 waybar
+bindsym --release Caps_Lock exec pkill -RTMIN+6 waybar
+bindsym --release Scroll_Lock exec pkill -RTMIN+6 waybar

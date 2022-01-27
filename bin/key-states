@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+get_key_state() {
+    light -G -s $(light -L | grep $1 | tr -d '\t') | jq '.|round'
+}
+
+CAPS=$(get_key_state "capslock")
+NUMS=$(get_key_state "numlock")
+SCROLL=$(get_key_state "scrolllock")
+
+OUT=""
+
+if [ $CAPS != 0 ]; then
+    OUT="$OUT 🆎 CAPS "
+fi
+if [ $NUMS != 0 ]; then
+    OUT="$OUT 🔢 NUMS "
+fi
+if [ $SCROLL != 0 ]; then
+    OUT="$OUT 📜 SCROLL "
+fi
+
+if [ "x$OUT" != x ]; then
+    echo ${OUT:0:-1}
+fi
