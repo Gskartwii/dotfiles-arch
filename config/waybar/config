@@ -1,7 +1,7 @@
 {
     "height": 30,
     "modules-left": ["sway/workspaces", "custom/swayscratch", "sway/mode"],
-    "modules-right": ["idle_inhibitor", "pulseaudio#sink", "pulseaudio#source", "network", "backlight", "cpu", "memory", "disk", "custom/virsh", "custom/pacman", "custom/language", "battery", "custom/weather", "custom/date", "custom/clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio#sink", "network", "backlight", "cpu", "memory", "disk", "custom/virsh", "custom/pacman", "custom/language", "battery", "custom/weather", "custom/date", "custom/clock"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -64,28 +64,30 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio#sink": {
-        "format": "<span size=\"12000\">{icon}</span> {volume} % {desc}",
-        "format-muted": "<span size=\"12000\"></span> {desc}",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "hdmi": "🖵",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "max-length": 20,
-        "on-click": "pavucontrol",
-        "on-click-right": "cyclepasink"
+        //"format": "<span size=\"12000\">{icon}</span> {volume} % {desc}",
+        "format": "",
+        "format-source": "",
+        "format-muted": "<span size=\"12000\"></span>"
+        //"format-icons": {
+        //    "headphone": "",
+        //    "hands-free": "",
+        //    "headset": "",
+        //    "hdmi": "🖵",
+        //    "phone": "",
+        //    "portable": "",
+        //    "car": "",
+        //    "default": ["", "", ""]
+        //},
+        //"max-length": 20,
+        //"on-click": "pavucontrol",
+        //"on-click-right": "cyclepasink"
     },
-    "pulseaudio#source": {
-        "format": "{format_source}",
-        "format-source": "<span size=\"12000\"></span> {volume} %",
-        "format-source-muted": "<span size=\"12000\"></span>",
-        "on-click": "pavucontrol -t 4",
-    },
+    //"pulseaudio#source": {
+    //    "format": "{format_source}",
+    //    "format-source": "<span size=\"12000\"></span> {volume} %",
+    //    "format-source-muted": "<span size=\"12000\"></span>",
+    //    "on-click": "pavucontrol -t 4",
+    //},
     //"sway/language": {
     //    "format": "<span size=\"12000\"></span> {}"
     //},

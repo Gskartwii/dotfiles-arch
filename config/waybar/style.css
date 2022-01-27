@@ -73,8 +73,7 @@ window#waybar.hidden {
 #custom-virsh,
 #custom-language,
 #disk {
-    padding: 0 8px;
-    margin: 0 4px;
+    padding: 0 12px;
     color: #557174;
 }
 
@@ -83,12 +82,12 @@ window#waybar.hidden {
     margin: 0 4px;
 }
 
-.modules-right widget {
+.modules-right widget * {
     border-right-style: dashed;
     border-right-color: #557174;
     border-right-width: 2px;
 }
-.modules-right widget:last-child {
+.modules-right widget:last-child * {
     border: none;
 }
 
@@ -137,6 +136,11 @@ label:focus {
 
 #pulseaudio {
     background-color: transparent;
+}
+#pulseaudio:not(.muted) {
+    padding: 0;
+    margin: 0;
+    border: none;
 }
 
 #idle_inhibitor {

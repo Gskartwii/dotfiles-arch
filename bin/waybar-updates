@@ -1,6 +1,10 @@
 #!/bin/bash
 
-nb=$(checkupdates | wc -l)
+CHECKUPDATES_DB_BASE="${TMPDIR:-/tmp}/checkup-db-${UID}"
+mkdir -p $CHECKUPDATES_DB_BASE
+CHECKUPDATES_DB=$(mktemp -d -p $CHECKUPDATES_DB_BASE)
+
+nb=$(env CHECKUPDATES_DB=$CHECKUPDATES_DB checkupdates | wc -l)
 if [ $nb -ne 0 ]; then
     echo $nb
 fi

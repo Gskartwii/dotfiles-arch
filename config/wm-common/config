@@ -175,11 +175,6 @@ title_align center
 focus_follows_mouse no
 
 bindsym $mod+Tab exec cyclekeyboard && pkill -RTMIN+7 waybar
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master unmute && amixer -q -D pulse sset Master 5%+
-bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master unmute && amixer -q -D pulse sset Master 5%-
-bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle
-bindsym Shift+XF86AudioRaiseVolume exec amixer -q -D pulse sset Master unmute && amixer -q -D pulse sset Master 1%+
-bindsym Shift+XF86AudioLowerVolume exec amixer -q -D pulse sset Master unmute && amixer -q -D pulse sset Master 1%-
 
 exec gammastep
 exec "systemctl --user import-environment"
