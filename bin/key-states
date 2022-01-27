@@ -3,7 +3,7 @@
 set -euo pipefail
 
 get_key_state() {
-    light -G -s $(light -L | grep $1 | tr -d '\t') | jq '.|round'
+    light -G -s $(light -L -s util/test/dryrun | grep $1 | tr -d '\t') | jq '.|round'
 }
 
 CAPS=$(get_key_state "capslock")
