@@ -73,5 +73,9 @@ bindsym $mod+period exec emote
 bindsym XF86AudioRaiseVolume exec pamixer -ui 5 && pamixer --get-volume > $XDG_RUNTIME_DIR/wob.sock
 bindsym XF86AudioLowerVolume exec pamixer -ud 5 && pamixer --get-volume > $XDG_RUNTIME_DIR/wob.sock
 bindsym XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $XDG_RUNTIME_DIR/wob.sock ) || pamixer --get-volume > $XDG_RUNTIME_DIR/wob.sock
+bindsym XF86MonBrightnessUp exec light -A 5 && light -G | jq '.|round' > $XDG_RUNTIME_DIR/wob-backlight.sock
+bindsym XF86MonBrightnessDown exec light -U 5 && light -G | jq '.|round' > $XDG_RUNTIME_DIR/wob-backlight.sock
 bindsym Shift+XF86AudioRaiseVolume exec pamixer -ui 1 && pamixer --get-volume > $XDG_RUNTIME_DIR/wob.sock
 bindsym Shift+XF86AudioLowerVolume exec pamixer -ud 1 && pamixer --get-volume > $XDG_RUNTIME_DIR/wob.sock
+bindsym Shift+XF86MonBrightnessUp exec light -A 1 && light -G | jq '.|round' > $XDG_RUNTIME_DIR/wob-backlight.sock
+bindsym Shift+XF86MonBrightnessDown exec light -U 1 && light -G | jq '.|round' > $XDG_RUNTIME_DIR/wob-backlight.sock

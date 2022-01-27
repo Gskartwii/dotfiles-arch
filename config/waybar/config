@@ -1,7 +1,7 @@
 {
     "height": 30,
     "modules-left": ["sway/workspaces", "custom/swayscratch", "sway/mode"],
-    "modules-right": ["idle_inhibitor", "pulseaudio#sink", "network", "backlight", "cpu", "memory", "disk", "custom/virsh", "custom/pacman", "custom/language", "battery", "custom/weather", "custom/date", "custom/clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio#sink", "network", "cpu", "memory", "disk", "custom/virsh", "custom/pacman", "custom/language", "battery", "custom/weather", "custom/date", "custom/clock"],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -37,10 +37,6 @@
         },
         "format-high": "<span size=\"12000\"></span> {percentage} %",
         "format": ""
-    },
-    "backlight": {
-        "format": "<span size=\"12000\">{icon}</span> {percent} %",
-        "format-icons": ["", "", "", "", "", ""]
     },
     "battery": {
         "states": {
