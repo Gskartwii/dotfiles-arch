@@ -21,7 +21,7 @@
         "exec": "date \"+%a %-d.%-m.%Y W%W\""
     },
     "custom/weather": {
-        "interval": 60,
+        "interval": 600,
         "exec": "short-weather"
     },
     "cpu": {
