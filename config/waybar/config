@@ -53,11 +53,11 @@
         "format-icons": ["", "", "", "", "", "", "", "", "", ""]
     },
     "network": {
-        "format-wifi": "<span size=\"12000\"></span> {essid}",
-        "format-ethernet": "<span size=\"12000\"></span> Ethernet",
+        "format-wifi": "<span size=\"12000\"></span>",
+        "format-ethernet": "<span size=\"12000\"></span>",
         "format-linked": "<span size=\"12000\"></span> {ifname}",
-        "format-disconnected": "<span size=\"12000\">⚠</span> Disconnected",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-disconnected": "<span size=\"12000\">⚠</span>",
+        "format-alt": "{essid}/{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio#sink": {
         //"format": "<span size=\"12000\">{icon}</span> {volume} % {desc}",
