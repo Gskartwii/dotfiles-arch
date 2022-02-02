@@ -8,7 +8,7 @@ export TEXMFCONFIG=$home/.config/texlive
 export WLR_NO_HARDWARE_CURSORS=1
 
 export EDITOR=kak
-export BROWSER=librewolf
+export BROWSER=firefox
 export KEYFILE=$HOME/.config/void/KEYFILE
 export GOPATH=$HOME/go
 
