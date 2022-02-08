@@ -6,6 +6,7 @@ export MATLAB_LOG_DIR=/tmp
 export TEXMFVAR=$HOME/.cache/texlive
 export TEXMFCONFIG=$home/.config/texlive
 export WLR_NO_HARDWARE_CURSORS=1
+export KAKOUNE_POSIX_SHELL=$(which dash)
 
 export EDITOR=kak
 export BROWSER=firefox
