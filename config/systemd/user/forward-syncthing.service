@@ -3,7 +3,7 @@ Description=Forward Syncthing from Maya to public internet
 
 [Service]
 Type=simple
-ExecStart=ssh -NT -L 0.0.0.0:22001:localhost:22000 alarm@maya.local
+ExecStart=ssh -NT -L 0.0.0.0:22001:localhost:22000 -L 0.0.0.0:4242:localhost:4242 alarm@maya.local
 Restart=on-failure
 RestartSec=30s
 
