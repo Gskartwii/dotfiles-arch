@@ -46,6 +46,8 @@ window#waybar.hidden {
 
 #mode {
     background-color: #98ddca;
+    padding: 0 8px;
+    margin: 0 4px;
 }
 
 #custom-swayscratch {
