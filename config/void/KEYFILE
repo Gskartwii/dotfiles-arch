@@ -15,6 +15,9 @@ select_up:k
 select_down:j
 select_left:h
 select_right:l
+select_parent:P
+select_first_sibling:A-k
+select_last_sibling:A-j
 erase:backspace
 create_sibling:s
 create_child:c
@@ -38,5 +41,5 @@ move_paste_node:m
 raise_selected:K
 lower_selected:J
 search:/
-undo_delete:u
+undo:u
 help:?

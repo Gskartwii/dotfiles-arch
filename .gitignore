@@ -8,4 +8,5 @@ ssh/*
 !ssh/config
 config/sway/Wallpaper.jpg
 config/fish/fish_variables
+config/void/db/*.lock
 *.db
