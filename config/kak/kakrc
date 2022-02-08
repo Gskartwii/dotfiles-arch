@@ -1,9 +1,8 @@
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
 
 plug "andreyorst/plug.kak" noload
-plug "kak-lsp/kak-lsp" do %{
-    cargo install --locked --force --path .
-} config %{
+plug "kak-lsp/kak-lsp" config %{
+    # delegate kak-lsp binary to Arch Linux package
     # set-option global lsp_cmd "/home/gskw/.config/kak/plugins/kak-lsp/target/debug/kak-lsp -s %val{session}"
     hook global WinSetOption filetype=(rust|go|scala) %{
         set-option window lsp_auto_highlight_references true
