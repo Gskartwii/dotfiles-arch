@@ -10,3 +10,4 @@ config/sway/Wallpaper.jpg
 config/fish/fish_variables
 config/void/db/*.lock
 *.db
+.stversions

@@ -36,6 +36,27 @@ assign [app_id="(firefox|librewolf)"] workspace 
 bindsym $mod+f workspace 
 bindsym $mod+shift+f move window to workspace 
 
+workspace ﭮ output $secondary
+workspace  output $primary
+workspace  output $secondary
+assign [class="discord"] workspace ﭮ
+assign [class="jetbrains-idea"] workspace 
+assign [app_id="telegramdesktop"] workspace 
+mode "apps" {
+    bindsym d workspace ﭮ, mode "default"
+    bindsym shift+d move window to workspace ﭮ, mode "default"
+
+    bindsym i workspace , mode "default"
+    bindsym shift+i move window to workspace , mode "default"
+
+    bindsym t workspace , mode "default"
+    bindsym shift+t move window to workspace , mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+q mode "apps"
+
 for_window [app_id="(firefox|librewolf)"] {
     border normal 4
     floating_border normal 4
@@ -88,3 +109,7 @@ bindsym Scroll_Lock exec pkill -RTMIN+6 waybar
 bindsym --release Num_Lock exec pkill -RTMIN+6 waybar
 bindsym --release Caps_Lock exec pkill -RTMIN+6 waybar
 bindsym --release Scroll_Lock exec pkill -RTMIN+6 waybar
+# TODO: What if shift is pressed?
+
+
+seat seat0 xcursor_theme phinger-cursors-light 32
