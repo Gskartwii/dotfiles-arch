@@ -30,6 +30,7 @@ plug "kak-lsp/kak-lsp" config %{
     map global user l ':enter-user-mode lsp<ret>' -docstring 'LSP Mode'
     set-face global DiagnosticWarning ,,rgb:b08800+bc
     set-face global DiagnosticError ,,rgb:cb2431+bc
+    set-face global DiagnosticHint ,,rgb:4078f2+ic
     lsp-auto-hover-insert-mode-enable
 }
 
@@ -85,6 +86,10 @@ plug "andreyorst/smarttab.kak" config %{
     hook global WinSetOption filetype=go noexpandtab
     hook global WinSetOption filetype=c expandtab
     hook global WinSetOption filetype=json expandtab
+}
+
+hook global WinSetOption smarttab_mode=expandtab %{
+    add-highlighter window/show-whitespaces show-whitespaces -lf %{ } -spc %{ } # Highlight tabs, but not spaces
 }
 
 plug "KJ_Duncan/kakoune-plantuml.kak" domain "bitbucket.org"
