@@ -32,6 +32,12 @@ plug "kak-lsp/kak-lsp" config %{
     set-face global DiagnosticError ,,rgb:cb2431+bc
     set-face global DiagnosticHint ,,rgb:4078f2+ic
     lsp-auto-hover-insert-mode-enable
+
+    hook -group lsp-goto-highlight global WinSetOption filetype=lsp-goto %{
+        add-highlighter window/lsp-goto/warning regex warning 0:rgb:b08800+b
+        add-highlighter window/lsp-goto/error regex error     0:rgb:cb2431+b
+        add-highlighter window/lsp-goto/hint regex hint      0:rgb:4078f2+i
+    }
 }
 
 plug "Gskartwii/droplet.kak" theme
