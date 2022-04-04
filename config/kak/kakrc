@@ -129,6 +129,7 @@ hook global WinSetOption filetype=markdown %{
 }
 
 map global user q ':db<ret>' -docstring 'Close buffer'
+map global user f ':format<ret>' -docstring 'Format buffer'
 unmap global normal *
 map global normal * <a-)>
 

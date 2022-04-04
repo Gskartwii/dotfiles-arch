@@ -1,0 +1,9 @@
+#!/bin/bash
+phone_name=$(kdeconnect-cli -a --name-only)
+if [[ -n $phone_name ]]; then
+	echo " $phone_name"
+else
+    echo "No phone"
+    echo ""
+    echo "disconnected"
+fi

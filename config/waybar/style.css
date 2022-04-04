@@ -109,7 +109,7 @@ label:focus {
     background-color: transparent;
 }
 
-#network.disconnected {
+#network.disconnected, #custom-kdeconnect.disconnected {
     background-color: #ffd3b4;
 }
 
