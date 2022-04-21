@@ -92,6 +92,7 @@ plug "andreyorst/smarttab.kak" config %{
     hook global WinSetOption filetype=go noexpandtab
     hook global WinSetOption filetype=c expandtab
     hook global WinSetOption filetype=json expandtab
+    hook global WinSetOption filetype=cpp expandtab
 }
 
 hook global WinSetOption smarttab_mode=expandtab %{

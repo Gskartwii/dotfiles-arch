@@ -6,10 +6,13 @@
 	defaultBranch = main
 
 [pager]
-	diff = delta
+	#diff = delta
 	log = delta
 	reflog = delta
 	show = delta
+
+[diff]
+	external = difft
 
 [interactive]
 	diffFilter = delta --color-only
