@@ -1,6 +1,19 @@
 Host *.aalto.fi
 	User hannula7
 
+Host kosh
+	HostName kosh.aalto.fi
+	User hannula7
+
+Host lyta
+	HostName lyta.aalto.fi
+	User hannula7
+
+Host kolibri
+	HostName kolibri
+	User hannula7
+	ProxyCommand ssh -W %h:%p kosh
+
 Host theseus
 	HostName theseus.dy.fi
 
