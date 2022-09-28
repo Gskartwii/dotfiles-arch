@@ -163,10 +163,17 @@ mode "$mode_system" {
 bindsym $mod+Pause mode "$mode_system"
 set $term kitty
 
-client.unfocused #557174 #f7f7e8 #557174 #00000000 #c7cfb7
-client.focused_inactive #557174 #f7f7e8 #557174 #00000000 #c7cfb7
-client.focused #557174 #9dad7f #f7f7e8 #00000000 #c7cfb7
-client.urgent #557174 #ffaaa7 #f7f7e8 #00000000 #c7cfb7
+# palette:
+# cadmium yellow 	#fff600	 => dark #b3ac00
+# pale terracotta	#d1a193
+# pale olive		#b8bc86
+# cadmium orange	#ed872d
+# powder blue		#b0e0e6
+#                		border	bg		text	indicator child_border
+client.unfocused 		#557174 #f7f7e8 #557174 #00000000 #b3ac00
+client.focused_inactive #557174 #f7f7e8 #557174 #00000000 #b3ac00
+client.focused 			#557174 #fff600 #557174 #00000000 #b3ac00
+client.urgent 			#557174 #b0e0e6 #f7f7e8 #00000000 #b3ac00
 default_border pixel 4
 default_floating_border none
 
