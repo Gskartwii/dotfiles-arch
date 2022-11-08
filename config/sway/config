@@ -18,6 +18,7 @@ seat * hide_cursor 3000
 input type:keyboard {
     xkb_layout us,fi
 }
+
 bindsym $mod+x exec killall -SIGUSR1 waybar
 bindsym $mod+c exec killall -SIGUSR2 waybar
 include $HOME/.config/sway/config.local
