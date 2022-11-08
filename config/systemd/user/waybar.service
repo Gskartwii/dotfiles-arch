@@ -5,7 +5,7 @@ PartOf=graphical-session.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/waybar
+ExecStart=/usr/bin/bash -c 'PATH=$HOME/.local/bin:$PATH /usr/bin/waybar'
 
 [Install]
 WantedBy=sway-session.target
