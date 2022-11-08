@@ -8,3 +8,4 @@ nb=$(env CHECKUPDATES_DB=$CHECKUPDATES_DB checkupdates | wc -l)
 if [ $nb -ne 0 ]; then
     echo $nb
 fi
+rm -rf $CHECKUPDATES_DB
