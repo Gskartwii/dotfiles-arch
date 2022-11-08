@@ -34,14 +34,14 @@
         "states": {
             "high": 90,
         },
-        "format-high": "<span size=\"12000\"></span> {usage} %",
+        "format-high": "<span size=\"12000\"></span> {usage} %",
         "format": ""
     },
     "memory": {
         "states": {
             "high": 80,
         },
-        "format-high": "<span size=\"12000\"></span> {percentage} %",
+        "format-high": "<span size=\"12000\">﬙</span> {percentage} %",
         "format": ""
     },
     "battery": {
