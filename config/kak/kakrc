@@ -187,7 +187,7 @@ hook global KakBegin .* %{
 hook global ClientCreate .* %{
     evaluate-commands %sh{
         randname=$(shuf -e -n1 red green blue yellow maroon magenta black white brown purple orange)
-        while [[ $kak_client_list == *$randname* ]]; do
+        while test "${kak_client_list#*$randname}" != "$kak_client_list"; do
             randname=$(shuf -e -n1 red green blue yellow maroon magenta black white brown purple orange)
         done
 
