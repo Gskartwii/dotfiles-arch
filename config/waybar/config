@@ -1,7 +1,9 @@
 {
     "height": 30,
     "modules-left": ["sway/workspaces", "custom/swayscratch", "sway/mode"],
-    "modules-right": ["idle_inhibitor", "pulseaudio#sink", "network", "cpu", "memory", "disk", "custom/virsh", "custom/pacman", "custom/keystate", "custom/language", "battery", "custom/weather", "custom/kdeconnect", "custom/date", "custom/clock"],
+    "modules-right": [
+         "idle_inhibitor", "pulseaudio#sink", "network", "cpu", "memory", "disk", "custom/virsh", "custom/pacman", "custom/keystate", "custom/language", "battery", "custom/weather", "custom/kdeconnect", "custom/date", "custom/clock"
+    ],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -65,19 +67,20 @@
     },
     "pulseaudio#sink": {
         //"format": "<span size=\"12000\">{icon}</span> {volume} % {desc}",
-        "format": "",
+        "format": "<span size=\"12000\">{icon}</span> {desc}",
+        "format-bluetooth": "",
         "format-source": "",
-        "format-muted": "<span size=\"12000\"></span>"
-        //"format-icons": {
-        //    "headphone": "",
-        //    "hands-free": "",
-        //    "headset": "",
-        //    "hdmi": "🖵",
-        //    "phone": "",
-        //    "portable": "",
-        //    "car": "",
-        //    "default": ["", "", ""]
-        //},
+        "format-muted": "<span size=\"12000\"></span>",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "hdmi": "🖵",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
         //"max-length": 20,
         //"on-click": "pavucontrol",
         //"on-click-right": "cyclepasink"
