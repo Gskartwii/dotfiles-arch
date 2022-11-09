@@ -61,13 +61,17 @@
     "network": {
         "format-wifi": "<span size=\"12000\"></span>",
         "format-ethernet": "<span size=\"12000\"></span>",
-        "format-linked": "<span size=\"12000\"></span> {ifname}",
+        "format-linked": "<span size=\"12000\"></span>",
         "format-disconnected": "<span size=\"12000\">⚠</span>",
+        "tooltip-format-wifi": "{essid}/{ifname}",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-linked": "{ifname}",
         "format-alt": "{essid}/{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio#sink": {
         //"format": "<span size=\"12000\">{icon}</span> {volume} % {desc}",
-        "format": "<span size=\"12000\">{icon}</span> {desc}",
+        "format": "<span size=\"12000\">{icon}</span>",
+        "tooltip": "{desc}",
         "format-bluetooth": "",
         "format-source": "",
         "format-muted": "<span size=\"12000\"></span>",
