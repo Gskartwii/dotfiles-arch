@@ -28,6 +28,8 @@ plug "kak-lsp/kak-lsp" config %{
 
     map global user d ':lsp-diagnostics<ret>' -docstring 'Diagnostics'
     map global user l ':enter-user-mode lsp<ret>' -docstring 'LSP Mode'
+    map global lsp n '<esc>: lsp-find-error --include-warnings<ret>' -docstring 'next warn/error'
+    map global lsp p '<esc>: lsp-find-error --previous --include-warnings<ret>' -docstring 'prev warn/error'
     set-face global DiagnosticWarning ,,rgb:b08800+bc
     set-face global DiagnosticError ,,rgb:cb2431+bc
     set-face global DiagnosticHint ,,rgb:4078f2+ic
