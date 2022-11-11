@@ -25,3 +25,8 @@ args = ["serve"]
 filetypes = ["scala"]
 roots = ["build.sbt"]
 command = "metals-kakoune"
+
+[language.cpp]
+filetypes = ["cpp"]
+roots = [".git"]
+command = "clangd"

@@ -4,7 +4,7 @@ plug "andreyorst/plug.kak" noload
 plug "kak-lsp/kak-lsp" config %{
     # delegate kak-lsp binary to Arch Linux package
     # set-option global lsp_cmd "/home/gskw/.config/kak/plugins/kak-lsp/target/debug/kak-lsp -s %val{session}"
-    hook global WinSetOption filetype=(rust|go|scala) %{
+    hook global WinSetOption filetype=(rust|go|scala|cpp) %{
         set-option window lsp_auto_highlight_references true
         set-option window lsp_hover_anchor false
         set-option window lsp_hover_max_lines 10
