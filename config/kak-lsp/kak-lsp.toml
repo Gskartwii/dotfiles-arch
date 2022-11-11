@@ -30,3 +30,9 @@ command = "metals-kakoune"
 filetypes = ["cpp"]
 roots = [".git"]
 command = "clangd"
+
+[language.typescript]
+filetypes = ["typescript"]
+roots = ["package.json"]
+command = "typescript-language-server"
+args = ["--stdio"]
