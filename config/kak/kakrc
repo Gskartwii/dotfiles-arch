@@ -3,7 +3,7 @@ source "%val{config}/plugins/plug.kak/rc/plug.kak"
 plug "andreyorst/plug.kak" noload
 plug "kak-lsp/kak-lsp" config %{
     # delegate kak-lsp binary to Arch Linux package
-    hook global WinSetOption filetype=(rust|go|scala|typescript|cpp) %{
+    hook global WinSetOption filetype=(rust|go|scala|typescript|cpp|c) %{
         set-option window lsp_auto_highlight_references true
         set-option window lsp_hover_anchor false
         set-option window lsp_hover_max_lines 10
@@ -251,3 +251,7 @@ provide-module luau %{
 }
 
 require-module luau
+
+try %{
+    source "%val{config}/kakrc.local"
+}

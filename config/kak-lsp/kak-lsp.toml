@@ -27,7 +27,7 @@ roots = ["build.sbt"]
 command = "metals-kakoune"
 
 [language.cpp]
-filetypes = ["cpp"]
+filetypes = ["cpp", "c"]
 roots = [".git"]
 command = "clangd"
 
