@@ -3,8 +3,6 @@ source "%val{config}/plugins/plug.kak/rc/plug.kak"
 plug "andreyorst/plug.kak" noload
 plug "kak-lsp/kak-lsp" config %{
     # delegate kak-lsp binary to Arch Linux package
-    set global lsp_cmd "kak-lsp -s %val{session} -vvvv --log /tmp/kak-lsp.log --config /home/hannula/.config/kak-lsp/kak-lsp.toml"
-    # set-option global lsp_cmd "/home/gskw/.config/kak/plugins/kak-lsp/target/debug/kak-lsp -s %val{session}"
     hook global WinSetOption filetype=(rust|go|scala|typescript|cpp) %{
         set-option window lsp_auto_highlight_references true
         set-option window lsp_hover_anchor false
