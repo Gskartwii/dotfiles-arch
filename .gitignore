@@ -1,6 +1,7 @@
 config/kak/plugins/
 config/kak/colors/
 config/systemd/user/*.wants
+config/systemd/user/*.local.*
 config/pulse/*
 !config/pulse/default.pa
 *.local
