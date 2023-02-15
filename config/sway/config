@@ -40,9 +40,11 @@ bindsym $mod+shift+f move window to workspace 
 workspace ﭮ output $secondary
 workspace  output $primary
 workspace  output $secondary
+workspace R output $primary
 assign [class="discord"] workspace ﭮ
 assign [class="jetbrains-idea"] workspace 
 assign [app_id="telegramdesktop"] workspace 
+assign [class="robloxplayerbeta.exe"] workspace R
 mode "apps" {
     bindsym d workspace ﭮ, mode "default"
     bindsym shift+d move window to workspace ﭮ, mode "default"
@@ -52,6 +54,9 @@ mode "apps" {
 
     bindsym t workspace , mode "default"
     bindsym shift+t move window to workspace , mode "default"
+
+    bindsym r workspace R, mode "default"
+    bindsym shift+r move window to workspace R, mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
