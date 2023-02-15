@@ -142,3 +142,7 @@ label:focus {
 #custom-virsh {
     background-color: transparent;
 }
+
+#custom-karmanjaka.off {
+    background-color: #ffd3b4;
+}

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+if nmcli -g GENERAL.STATE connection show Karmanjaka-hotspot 2>/dev/null | grep -q 'activ'; then
+	echo '📡'
+	echo 'Karmanjaka hotspot running'
+	echo 'on'
+else
+	echo '📡'
+	echo 'Karmanjaka hotspot down'
+	echo 'off'
+fi

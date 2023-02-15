@@ -2,7 +2,7 @@
     "height": 30,
     "modules-left": ["sway/workspaces", "custom/swayscratch", "sway/mode"],
     "modules-right": [
-         "idle_inhibitor", "pulseaudio#sink", "network", "cpu", "memory", "disk", "custom/virsh", "custom/pacman", "custom/keystate", "custom/language", "battery", "custom/weather", "custom/kdeconnect", "custom/date", "custom/clock"
+         "idle_inhibitor", "pulseaudio#sink", "network", "cpu", "memory", "disk", "custom/virsh", "custom/pacman", "custom/keystate", "custom/language", "battery", "custom/weather", "custom/karmanjaka", "custom/kdeconnect", "custom/date", "custom/clock"
     ],
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -102,6 +102,10 @@
         "exec": "key-states",
         "interval": "once",
         "signal": 6
+    },
+    "custom/karmanjaka": {
+        "exec": "karmanjaka-on",
+        "interval": 5
     },
     "custom/language": {
         "format": "<span size=\"12000\"></span> {}",
