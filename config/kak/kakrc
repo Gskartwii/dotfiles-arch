@@ -132,7 +132,7 @@ unmap global normal *
 map global normal * <a-)>
 
 hook global WinSetOption filetype=rust %{
-    set-option window formatcmd 'rustfmt'
+    set-option window formatcmd 'rustfmt --edition 2021'
     set-option window tabstop 4
     set-option window indentwidth 4
 }
