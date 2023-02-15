@@ -36,3 +36,8 @@ filetypes = ["typescript"]
 roots = ["package.json"]
 command = "typescript-language-server"
 args = ["--stdio"]
+
+[language.latex]
+filetypes = ["latex"]
+roots = ["document.tex"]
+command = "texlab"
