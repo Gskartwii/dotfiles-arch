@@ -88,12 +88,8 @@ plug "andreyorst/fzf.kak" config %{
 plug "jbomanson/search-doc.kak" defer search-doc %{} demand
 
 plug "andreyorst/smarttab.kak" config %{
-    hook global WinSetOption filetype=rust expandtab
-    hook global WinSetOption filetype=scala expandtab
+    hook global WinSetOption filetype=(rust|scala|c|json|cpp|typescript) expandtab
     hook global WinSetOption filetype=go noexpandtab
-    hook global WinSetOption filetype=c expandtab
-    hook global WinSetOption filetype=json expandtab
-    hook global WinSetOption filetype=cpp expandtab
 }
 
 hook global WinSetOption smarttab_mode=expandtab %{
@@ -165,6 +161,11 @@ hook global WinSetOption filetype=latex %{
 hook global WinSetOption filetype=json %{
     set-option window tabstop 4
     set-option window indentwidth 4
+}
+
+hook global WinSetOption filetype=typescript %{
+    set-option window tabstop 2
+    set-option window indentwidth 2
 }
 
 hook global BufCreate .*waybar/config %{
