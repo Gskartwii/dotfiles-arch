@@ -20,7 +20,7 @@
     },
     "custom/date": {
         "interval": 1,
-        "exec": "date \"+%a %-d.%-m.%Y W%W\""
+        "exec": "date \"+%a %-d.%-m.%Y W%-W\""
     },
     "custom/weather": {
         "interval": 600,
