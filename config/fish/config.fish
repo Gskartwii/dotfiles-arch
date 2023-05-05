@@ -27,7 +27,7 @@ function fish_prompt
     set -l path (set_color -ou green)(pwd | sed "s:^$HOME:~:")(set_color normal)
     set -l git_info ""
     if git status >/dev/null 2>/dev/null
-        set -l branch_name (git rev-parse --abbrev-ref @)
+        set -l branch_name (git rev-parse --abbrev-ref @ 2> /dev/null)
         if test $branch_name = "HEAD"
             set branch_name (git describe --all --contains --always HEAD)
         end
