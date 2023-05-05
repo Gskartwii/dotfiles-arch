@@ -21,4 +21,6 @@ Host theseus
 Host maya
 	User alarm
 
-Include /home/gskw/.ssh/config.local
+Match all
+
+Include ~/.ssh/config.local
