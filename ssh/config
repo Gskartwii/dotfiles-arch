@@ -21,6 +21,18 @@ Host theseus
 Host maya
 	User alarm
 
-Match all
+Host maissimaa.dy.fi
+	User alarm
 
-Include ~/.ssh/config.local
+Host *.jyu.fi
+	User alerilha
+Host *alava
+	User alerilha
+
+Host jalava
+	HostName jalava.cc.jyu.fi
+Host halava
+	HostName halava.cc.jyu.fi
+
+Match all
+    Include ~/.ssh/config.local
