@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if ping -c 1 wttr.in >& /dev/null; then
-    OUTPUT=`http --follow --check-status GET "wttr.in/$(cat ~/.config/weather-location)\?format=%c %t" 2> /dev/null`
+    OUTPUT=`http --follow --check-status GET "wttr.in/$(cat ~/.config/weather-location)\?format=%c %t&m" 2> /dev/null`
     if [ $? -eq 0 ]; then
         echo $OUTPUT | sed -e 's/\+0/0/g' | sed -e 's/-/−/g'
     fi
