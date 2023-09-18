@@ -11,8 +11,6 @@
 	reflog = delta
 	show = delta
 
-[diff]
-	external = difft
 
 [interactive]
 	diffFilter = delta --color-only
