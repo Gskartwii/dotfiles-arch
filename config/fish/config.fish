@@ -1,6 +1,7 @@
 mcfly init fish | source
 zoxide init fish | source
 alias ls=exa
+alias irssi="irssi --home=~/.config/irssi"
 alias icat="kitty +kitten icat"
 alias btm="btm --color gruvbox-light"
 alias kakc="kak -c"
