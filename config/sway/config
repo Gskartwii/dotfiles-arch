@@ -11,6 +11,11 @@ input type:touchpad {
     natural_scroll enabled
 }
 
+input * {
+    dwt disabled
+    dwtp disabled
+}
+
 exec "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK; systemctl --user start sway-session.target"
 
 seat * hide_cursor 3000
@@ -95,6 +100,7 @@ titlebar_padding 8 8
 
 bindsym $mod+m exec screenshot-for-phone
 bindsym $mod+Print exec screenshot-for-save
+bindsym $mod+shift+o exec screenshot-for-save
 bindsym $mod+period exec emote
 
 bindsym XF86AudioRaiseVolume exec pamixer -ui 5 && pamixer --get-volume > $XDG_RUNTIME_DIR/wob.sock
